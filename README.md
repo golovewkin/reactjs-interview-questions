@@ -25,8 +25,6 @@ You can download the PDF and Epub version of this repository from the latest run
 |1  | [What is React?](#what-is-react) |
 |2  | [What are the major features of React?](#what-are-the-major-features-of-react) |
 |3  | [What is JSX?](#what-is-jsx) |
-|4  | [What is the difference between Element and Component?](#what-is-the-difference-between-element-and-component) |
-|5  | [How to create components in React?](#how-to-create-components-in-react) |
 |6  | [When to use a Class Component over a Function Component?](#when-to-use-a-class-component-over-a-function-component) |
 |7  | [What are Pure Components?](#what-are-pure-components) |
 |8  | [What is state in React?](#what-is-state-in-react) |
@@ -34,17 +32,11 @@ You can download the PDF and Epub version of this repository from the latest run
 |10 | [What is the difference between state and props?](#what-is-the-difference-between-state-and-props) |
 |11 | [Why should we not update the state directly?](#why-should-we-not-update-the-state-directly) |
 |12 | [What is the purpose of callback function as an argument of setState()?](#what-is-the-purpose-of-callback-function-as-an-argument-of-setstate)
-|13 | [What is the difference between HTML and React event handling?](#what-is-the-difference-between-html-and-react-event-handling) |
-|14 | [How to bind methods or event handlers in JSX callbacks?](#how-to-bind-methods-or-event-handlers-in-jsx-callbacks) |
-|15 | [How to pass a parameter to an event handler or callback?](#how-to-pass-a-parameter-to-an-event-handler-or-callback) |
 |16 | [What are synthetic events in React?](#what-are-synthetic-events-in-react) |
-|17 | [What are inline conditional expressions?](#what-are-inline-conditional-expressions) |
 |18 | [What is "key" prop and what is the benefit of using it in arrays of elements?](#what-is-key-prop-and-what-is-the-benefit-of-using-it-in-arrays-of-elements) |
 |19 | [What is the use of refs?](#what-is-the-use-of-refs) |
 |20 | [How to create refs?](#how-to-create-refs)
 |21 | [What are forward refs?](#what-are-forward-refs) |
-|22 | [Which is preferred option with in callback refs and findDOMNode()?](#which-is-preferred-option-with-in-callback-refs-and-finddomnode) |
-|23 | [Why are String Refs legacy?](#why-are-string-refs-legacy) |
 |24 | [What is Virtual DOM?](#what-is-virtual-dom) |
 |25 | [How Virtual DOM works?](#how-virtual-dom-works) |
 |26 | [What is the difference between Shadow DOM and Virtual DOM?](#what-is-the-difference-between-shadow-dom-and-virtual-dom) |
@@ -54,74 +46,51 @@ You can download the PDF and Epub version of this repository from the latest run
 |30 | [What are uncontrolled components?](#what-are-uncontrolled-components) |
 |31 | [What is the difference between createElement and cloneElement?](#what-is-the-difference-between-createelement-and-cloneelement) |
 |32 | [What is Lifting State Up in React?](#what-is-lifting-state-up-in-react) |
-|33 | [What are the different phases of component lifecycle?](#what-are-the-different-phases-of-component-lifecycle) |
-|34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
 |35 | [What are Higher-Order components?](#what-are-higher-order-components) |
 |36 | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component) |
 |37 | [What is context?](#what-is-context) |
 |38 | [What is children prop?](#what-is-children-prop) |
-|39 | [How to write comments in React?](#how-to-write-comments-in-react) |
 |40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
 |41 | [What is reconciliation?](#what-is-reconciliation) |
-|42 | [How to set state with a dynamic key name?](#how-to-set-state-with-a-dynamic-key-name) |
-|43 | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
-|44 | [Is lazy function supports named exports?](#is-lazy-function-supports-named-exports) |
 |45 | [Why React uses className over class attribute?](#why-react-uses-classname-over-class-attribute) |
 |46 | [What are fragments?](#what-are-fragments) |
 |47 | [Why fragments are better than container divs?](#why-fragments-are-better-than-container-divs) |
 |48 | [What are portals in React?](#what-are-portals-in-react) |
 |49 | [What are stateless components?](#what-are-stateless-components) |
 |50 | [What are stateful components?](#what-are-stateful-components) |
-|51 | [How to apply validation on props in React?](#how-to-apply-validation-on-props-in-react) |
 |52 | [What are the advantages of React?](#what-are-the-advantages-of-react) |
 |53 | [What are the limitations of React?](#what-are-the-limitations-of-react) |
 |54 | [What are error boundaries in React v16](#what-are-error-boundaries-in-react-v16) |
-|55 | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15) |
-|56 | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking) |
 |57 | [What is the use of react-dom package?](#what-is-the-use-of-react-dom-package) |
 |58 | [What is the purpose of render method of react-dom?](#what-is-the-purpose-of-render-method-of-react-dom) |
 |59 | [What is ReactDOMServer?](#what-is-reactdomserver) |
 |60 | [How to use InnerHtml in React?](#how-to-use-innerhtml-in-react) |
-|61 | [How to use styles in React?](#how-to-use-styles-in-react) |
-|62 | [How events are different in React?](#how-events-are-different-in-react) |
 |63 | [What will happen if you use setState in constructor?](#what-will-happen-if-you-use-setstate-in-constructor) |
+|66 | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state) |
 |64 | [What is the impact of indexes as keys?](#what-is-the-impact-of-indexes-as-keys) |
 |65 | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method) |
-|66 | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state) |
 |67 | [How do you conditionally render components?](#how-do-you-conditionally-render-components)
 |68 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements) |
 |69 | [How you use decorators in React?](#how-you-use-decorators-in-react) |
 |70 | [How do you memoize a component?](#how-do-you-memoize-a-component) |
 |71 | [How you implement Server-Side Rendering or SSR?](#how-you-implement-server-side-rendering-or-ssr) |
-|72 | [How to enable production mode in React?](#how-to-enable-production-mode-in-react) |
-|73 | [What is CRA and its benefits?](#what-is-cra-and-its-benefits) |
 |74 | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting) |
-|75 | [What are the lifecycle methods going to be deprecated in React v16?](#what-are-the-lifecycle-methods-going-to-be-deprecated-in-react-v16) |
-|76 | [What is the purpose of getDerivedStateFromProps() lifecycle method?](#what-is-the-purpose-of-getderivedstatefromprops-lifecycle-method) |
 |77 | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method) |
 |78 | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components) |
-|79 | [What is the recommended way for naming components?](#what-is-the-recommended-way-for-naming-components) |
 |80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
 |81 | [What is a switching component?](#what-is-a-switching-component) |
 |82 | [Why we need to pass a function to setState()?](#why-we-need-to-pass-a-function-to-setstate) |
 |83 | [What is strict mode in React?](#what-is-strict-mode-in-react) |
 |84 | [What are React Mixins?](#what-are-react-mixins) |
-|85 | [Why is isMounted() an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution) |
 |86 | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react) |
 |87 | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter) |
-|88 | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16) |
 |89 | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate) |
 |90 | [Can you force a component to re-render without calling setState?](#can-you-force-a-component-to-re-render-without-calling-setstate) |
 |91 | [What is the difference between super() and super(props) in React using ES6 classes?](#what-is-the-difference-between-super-and-superprops-in-react-using-es6-classes) |
 |92 | [How to loop inside JSX?](#how-to-loop-inside-jsx) |
-|93 | [How do you access props in attribute quotes?](#how-do-you-access-props-in-attribute-quotes) |
 |94 | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape) |
-|95 | [How to conditionally apply class attributes?](#how-to-conditionally-apply-class-attributes) |
 |96 | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom) |
 |97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
-|98 | [How to use React label element?](#how-to-use-react-label-element) |
-|99 | [How to combine multiple inline style objects?](#how-to-combine-multiple-inline-style-objects) |
-|100| [How to re-render the view when the browser is resized?](#how-to-re-render-the-view-when-the-browser-is-resized)
 |101| [What is the difference between setState and replaceState methods?](#what-is-the-difference-between-setstate-and-replacestate-methods) |
 |102| [How to listen to state changes?](#how-to-listen-to-state-changes) |
 |103| [What is the recommended approach of removing an array element in react state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state) |
@@ -402,84 +371,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-4. ### What is the difference between Element and Component?
-
-    An *Element* is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. *Elements* can contain other *Elements* in their props. Creating a React element is cheap. Once an element is created, it is never mutated.
-
-    The object representation of React Element would be as follows:
-
-    ```javascript
-    const element = React.createElement(
-      'div',
-      {id: 'login-btn'},
-      'Login'
-    )
-    ```
-
-    The above `React.createElement()` function returns an object:
-
-    ```
-    {
-      type: 'div',
-      props: {
-        children: 'Login',
-        id: 'login-btn'
-      }
-    }
-    ```
-
-    And finally it renders to the DOM using `ReactDOM.render()`:
-
-    ```html
-    <div id='login-btn'>Login</div>
-    ```
-
-    Whereas a **component** can be declared in several different ways. It can be a class with a `render()` method or it can be defined as a function. In either case, it takes props as an input, and returns a JSX tree as the output:
-
-    ```javascript
-    const Button = ({ onLogin }) =>
-      <div id={'login-btn'} onClick={onLogin}>Login</div>
-    ```
-
-    Then JSX gets transpiled to a `React.createElement()` function tree:
-
-    ```javascript
-    const Button = ({ onLogin }) => React.createElement(
-      'div',
-      { id: 'login-btn', onClick: onLogin },
-      'Login'
-    )
-    ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-5. ### How to create components in React?
-
-    There are two possible ways to create a component.
-
-    1. **Function Components:** This is the simplest way to create a component. Those are pure JavaScript functions that accept props object as first parameter and return React elements:
-
-        ```jsx harmony
-        function Greeting({ message }) {
-          return <h1>{`Hello, ${message}`}</h1>
-
-        }
-        ```
-
-    2. **Class Components:** You can also use ES6 class to define a component. The above function component can be written as:
-
-        ```jsx harmony
-        class Greeting extends React.Component {
-          render() {
-            return <h1>{`Hello, ${this.props.message}`}</h1>
-          }
-        }
-        ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 6. ### When to use a Class Component over a Function Component?
 
     If the component needs *state or lifecycle methods* then use class component otherwise use function component.
@@ -595,142 +486,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-13. ### What is the difference between HTML and React event handling?
-    Below are some of the main differences between HTML and React event handling,
-
-    1. In HTML, the event name usually represents in *lowercase* as a convention:
-
-        ```html
-        <button onclick='activateLasers()'>
-        ```
-
-       Whereas in React it follows *camelCase* convention:
-
-        ```jsx harmony
-        <button onClick={activateLasers}>
-        ```
-
-    2. In HTML, you can return `false` to prevent default behavior:
-
-        ```html
-        <a href='#' onclick='console.log("The link was clicked."); return false;' />
-        ```
-
-       Whereas in React you must call `preventDefault()` explicitly:
-
-        ```javascript
-        function handleClick(event) {
-          event.preventDefault()
-          console.log('The link was clicked.')
-        }
-        ```
-
-    3. In HTML, you need to invoke the function by appending `()`
-       Whereas in react you should not append `()` with the function name. (refer "activateLasers" function in the first point for example)
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-14. ### How to bind methods or event handlers in JSX callbacks?
-
-    There are 3 possible ways to achieve this:
-
-    1.	**Binding in Constructor:** In JavaScript classes, the methods are not bound by default. The same thing applies for React event handlers defined as class methods. Normally we bind them in constructor.
-
-        ```javascript
-        class Foo extends Component {
-          constructor(props) {
-            super(props);
-            this.handleClick = this.handleClick.bind(this);
-          }
-          handleClick() {
-            console.log('Click happened');
-          }
-          render() {
-            return <button onClick={this.handleClick}>Click Me</button>;
-          }
-        }
-
-        ```
-
-    2. **Public class fields syntax:** If you don't like to use bind approach then *public class fields syntax* can be used to correctly bind callbacks.
-
-        ```jsx harmony
-        handleClick = () => {
-          console.log('this is:', this)
-        }
-        ```
-
-        ```jsx harmony
-        <button onClick={this.handleClick}>
-          {'Click me'}
-        </button>
-        ```
-
-    3. **Arrow functions in callbacks:** You can use *arrow functions* directly in the callbacks.
-
-        ```jsx harmony
-        handleClick() {
-            console.log('Click happened');
-        }
-        render() {
-            return <button onClick={() => this.handleClick()}>Click Me</button>;
-        }
-        ```
-
-    **Note:** If the callback is passed as prop to child components, those components might do an extra re-rendering. In those cases, it is preferred to go with `.bind()` or *public class fields syntax* approach considering performance.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-15. ### How to pass a parameter to an event handler or callback?
-
-    You can use an *arrow function* to wrap around an *event handler* and pass parameters:
-
-    ```jsx harmony
-    <button onClick={() => this.handleClick(id)} />
-    ```
-
-    This is an equivalent to calling `.bind`:
-
-    ```jsx harmony
-    <button onClick={this.handleClick.bind(this, id)} />
-    ```
-    Apart from these two approaches, you can also pass arguments to a function which is defined as arrow function
-    ```jsx harmony
-    <button onClick={this.handleClick(id)} />
-    handleClick = (id) => () => {
-        console.log("Hello, your ticket number is", id)
-    };
-    ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 16. ### What are synthetic events in React?
 
     `SyntheticEvent` is a cross-browser wrapper around the browser's native event. It's API is same as the browser's native event, including `stopPropagation()` and `preventDefault()`, except the events work identically across all browsers.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-17. ### What are inline conditional expressions?
-
-    You can use either *if statements* or *ternary expressions* which are available from JS to conditionally render expressions. Apart from these approaches, you can also embed any expressions in JSX by wrapping them in curly braces and then followed by JS logical operator `&&`.
-
-    ```jsx harmony
-    <h1>Hello!</h1>
-    {
-        messages.length > 0 && !isLogin?
-          <h2>
-              You have {messages.length} unread messages.
-          </h2>
-          :
-          <h2>
-              You don't have unread messages.
-          </h2>
-    }
-    ```
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -837,71 +595,6 @@ You can download the PDF and Epub version of this repository from the latest run
     <ButtonElement ref={ref}>{'Forward Ref'}</ButtonElement>
     ```
 
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-22. ### Which is preferred option with in callback refs and findDOMNode()?
-
-    It is preferred to use *callback refs* over `findDOMNode()` API. Because `findDOMNode()` prevents certain improvements in React in the future.
-
-    The **legacy** approach of using `findDOMNode`:
-
-    ```javascript
-    class MyComponent extends Component {
-      componentDidMount() {
-        findDOMNode(this).scrollIntoView()
-      }
-
-      render() {
-        return <div />
-      }
-    }
-    ```
-
-    The recommended approach is:
-
-    ```javascript
-    class MyComponent extends Component {
-      constructor(props){
-        super(props);
-        this.node = createRef();
-      }
-      componentDidMount() {
-        this.node.current.scrollIntoView();
-      }
-
-      render() {
-        return <div ref={this.node} />
-      }
-    }
-    ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-23. ### Why are String Refs legacy?
-
-    If you worked with React before, you might be familiar with an older API where the `ref` attribute is a string, like `ref={'textInput'}`, and the DOM node is accessed as `this.refs.textInput`. We advise against it because *string refs have below issues*, and are considered legacy. String refs were **removed in React v16**.
-
-    1. They *force React to keep track of currently executing component*. This is problematic because it makes react module stateful, and thus causes weird errors when react module is duplicated in the bundle.
-    2. They are *not composable* — if a library puts a ref on the passed child, the user can't put another ref on it. Callback refs are perfectly composable.
-    3. They *don't work with static analysis* like Flow. Flow can't guess the magic that framework does to make the string ref appear on `this.refs`, as well as its type (which could be different). Callback refs are friendlier to static analysis.
-    4. It doesn't work as most people would expect with the "render callback" pattern (e.g. <DataGrid renderRow={this.renderRow} />)
-       ```jsx harmony
-       class MyComponent extends Component {
-         renderRow = (index) => {
-           // This won't work. Ref will get attached to DataTable rather than MyComponent:
-           return <input ref={'input-' + index} />;
-
-           // This would work though! Callback refs are awesome.
-           return <input ref={input => this['input-' + index] = input} />;
-         }
-
-         render() {
-           return <DataTable data={this.props.data} renderRow={this.renderRow} />
-         }
-       }
-       ```
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -1027,60 +720,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-33. ### What are the different phases of component lifecycle?
-
-    The component lifecycle has three distinct lifecycle phases:
-
-    1. **Mounting:** The component is ready to mount in the browser DOM. This phase covers initialization from `constructor()`, `getDerivedStateFromProps()`, `render()`, and `componentDidMount()` lifecycle methods.
-
-    2. **Updating:** In this phase, the component gets updated in two ways, sending the new props and updating the state either from `setState()` or `forceUpdate()`. This phase covers `getDerivedStateFromProps()`, `shouldComponentUpdate()`, `render()`, `getSnapshotBeforeUpdate()` and `componentDidUpdate()` lifecycle methods.
-
-    3. **Unmounting:** In this last phase, the component is not needed and gets unmounted from the browser DOM. This phase includes `componentWillUnmount()` lifecycle method.
-
-    It's worth mentioning that React internally has a concept of phases when applying changes to the DOM. They are separated as follows
-
-    1. **Render** The component will render without any side-effects. This applies for Pure components and in this phase, React can pause, abort, or restart the render.
-
-    2. **Pre-commit** Before the component actually applies the changes to the DOM, there is a moment that allows React to read from the DOM through the `getSnapshotBeforeUpdate()`.
-
-    3. **Commit** React works with the DOM and executes the final lifecycles respectively `componentDidMount()` for mounting, `componentDidUpdate()` for updating, and `componentWillUnmount()` for unmounting.
-
-    React 16.3+ Phases (or an [interactive version](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
-
-    ![phases 16.4+](images/phases16.4.png)
-
-    Before React 16.3
-
-    ![phases 16.2](images/phases.png)
-
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-34. ### What are the lifecycle methods of React?
-
-    Before React 16.3
-
-    - **componentWillMount:** Executed before rendering and is used for App level configuration in your root component.
-    - **componentDidMount:** Executed after first rendering and here all AJAX requests, DOM or state updates, and set up event listeners should occur.
-    - **componentWillReceiveProps:** Executed when particular prop updates to trigger state transitions.
-    - **shouldComponentUpdate:** Determines if the component will be updated or not. By default it returns `true`. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives new prop.
-    - **componentWillUpdate:** Executed before re-rendering the component when there are props & state changes confirmed by `shouldComponentUpdate()` which returns true.
-    - **componentDidUpdate:** Mostly it is used to update the DOM in response to prop or state changes.
-    - **componentWillUnmount:** It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
-
-    React 16.3+
-
-    - **getDerivedStateFromProps:** Invoked right before calling `render()` and is invoked on *every* render. This exists for rare use cases where you need derived state. Worth reading [if you need derived state](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html).
-    - **componentDidMount:** Executed after first rendering and where all AJAX requests, DOM or state updates, and set up event listeners should occur.
-    - **shouldComponentUpdate:** Determines if the component will be updated or not. By default it returns `true`. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives new prop.
-    - **getSnapshotBeforeUpdate:** Executed right before rendered output is committed to the DOM. Any value returned by this will be passed into `componentDidUpdate()`. This is useful to capture information from the DOM i.e. scroll position.
-    - **componentDidUpdate:** Mostly it is used to update the DOM in response to prop or state changes. This will not fire if `shouldComponentUpdate()` returns `false`.
-    - **componentWillUnmount** It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 35. ### What are Higher-Order Components?
 
     A *higher-order component* (*HOC*) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
@@ -1165,32 +804,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-39. ### How to write comments in React?
-
-    The comments in React/JSX are similar to JavaScript Multiline comments but are wrapped in curly braces.
-
-    **Single-line comments:**
-
-    ```jsx harmony
-    <div>
-      {/* Single-line comments(In vanilla JavaScript, the single-line comments are represented by double slash(//)) */}
-      {`Welcome ${user}, let's play React`}
-    </div>
-    ```
-
-    **Multi-line comments:**
-
-    ```jsx harmony
-    <div>
-      {/* Multi-line comments for more than
-       one line */}
-      {`Welcome ${user}, let's play React`}
-    </div>
-    ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 40. ### What is the purpose of using super constructor with props argument?
 
     A child class constructor cannot make use of `this` reference until `super()` method has been called. The same applies for ES6 sub-classes as well. The main reason of passing props parameter to `super()` call is to access `this.props` in your child constructors.
@@ -1236,63 +849,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
     When a component's props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element with the previously rendered one. When they are not equal, React will update the DOM. This process is called *reconciliation*.
 
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-42. ### How to set state with a dynamic key name?
-
-    If you are using ES6 or the Babel transpiler to transform your JSX code then you can accomplish this with *computed property names*.
-
-    ```javascript
-    handleInputChange(event) {
-      this.setState({ [event.target.id]: event.target.value })
-    }
-    ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-43. ### What would be the common mistake of function being called every time the component renders?
-
-    You need to make sure that function is not being called while passing the function as a parameter.
-
-    ```jsx harmony
-    render() {
-      // Wrong: handleClick is called instead of passed as a reference!
-      return <button onClick={this.handleClick()}>{'Click Me'}</button>
-    }
-    ```
-
-    Instead, pass the function itself without parenthesis:
-
-    ```jsx harmony
-    render() {
-      // Correct: handleClick is passed as a reference!
-      return <button onClick={this.handleClick}>{'Click Me'}</button>
-    }
-    ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-44. ### Is lazy function supports named exports?
-    No, currently `React.lazy` function supports default exports only. If you would like to import modules which are named exports, you can create an intermediate module that reexports it as the default. It also ensures that tree shaking keeps working and don’t pull unused components.
-    Let's take a component file which exports multiple named components,
-    ```javascript
-    // MoreComponents.js
-    export const SomeComponent = /* ... */;
-    export const UnusedComponent = /* ... */;
-    ```
-    and reexport `MoreComponents.js` components in an intermediate file `IntermediateComponent.js`
-    ```javascript
-    // IntermediateComponent.js
-    export { SomeComponent as default } from "./MoreComponents.js";
-    ```
-    Now you can import the module using lazy function as below,
-    ```javascript
-    import React, { lazy } from 'react';
-    const SomeComponent = lazy(() => import("./IntermediateComponent.js"));
-    ```
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -1410,71 +966,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-51. ### How to apply validation on props in React?
-
-    When the application is running in *development mode*, React will automatically check all props that we set on components to make sure they have *correct type*. If the type is incorrect, React will generate warning messages in the console. It's disabled in *production mode* due to performance impact. The mandatory props are defined with `isRequired`.
-
-    The set of predefined prop types:
-
-    1. `PropTypes.number`
-    2. `PropTypes.string`
-    3. `PropTypes.array`
-    4. `PropTypes.object`
-    5. `PropTypes.func`
-    6. `PropTypes.node`
-    7. `PropTypes.element`
-    8. `PropTypes.bool`
-    9. `PropTypes.symbol`
-    10. `PropTypes.any`
-
-    We can define `propTypes` for `User` component as below:
-
-    ```jsx harmony
-    import React from 'react'
-    import PropTypes from 'prop-types'
-
-    class User extends React.Component {
-      static propTypes = {
-        name: PropTypes.string.isRequired,
-        age: PropTypes.number.isRequired
-      }
-
-      render() {
-        return (
-          <>
-            <h1>{`Welcome, ${this.props.name}`}</h1>
-            <h2>{`Age, ${this.props.age}`}</h2>
-          </>
-        )
-      }
-    }
-    ```
-
-    **Note:** In React v15.5 *PropTypes* were moved from `React.PropTypes` to `prop-types` library.
-
-    *The Equivalent Functional Component*
-
-    ```jsx harmony
-    import React from 'react'
-    import PropTypes from 'prop-types'
-   
-    function User({name, age}) {
-      return (
-        <>
-          <h1>{`Welcome, ${name}`}</h1>
-          <h2>{`Age, ${age}`}</h2>
-        </>
-      )
-    }
-
-    User.propTypes = {
-        name: PropTypes.string.isRequired,
-        age: PropTypes.number.isRequired
-      }
-    ```
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 52. ### What are the advantages of React?
     Below are the list of main advantages of React,
 
@@ -1542,21 +1033,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
 
    **[⬆ Back to Top](#table-of-contents)**
-    
-55. ### How error boundaries handled in React v15?
 
-    React v15 provided very basic support for *error boundaries* using `unstable_handleError` method. It has been renamed to `componentDidCatch` in React v16.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-56. ### What are the recommended ways for static type checking?
-
-    Normally we use *PropTypes library* (`React.PropTypes` moved to a `prop-types` package since React v15.5) for *type checking* in the React applications. For large code bases, it is recommended to use *static type checkers* such as Flow or TypeScript, that perform type checking at compile time and provide auto-completion features.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 57. ### What is the use of `react-dom` package?
 
     The `react-dom` package provides *DOM-specific methods* that can be used at the top level of your app. Most of the components are not required to use this module. Some of the methods of this package are:
@@ -1628,42 +1105,55 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-61. ### How to use styles in React?
-
-    The `style` attribute accepts a JavaScript object with camelCased properties rather than a CSS string. This is consistent with the DOM style JavaScript property, is more efficient, and prevents XSS security holes.
-
-    ```jsx harmony
-    const divStyle = {
-      color: 'blue',
-      backgroundImage: 'url(' + imgUrl + ')'
-    };
-
-    function HelloWorldComponent() {
-      return <div style={divStyle}>Hello World!</div>
-    }
-    ```
-
-    Style keys are camelCased in order to be consistent with accessing the properties on DOM nodes in JavaScript (e.g. `node.style.backgroundImage`).
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-62. ### How events are different in React?
-
-    Handling events in React elements has some syntactic differences:
-
-    1. React event handlers are named using camelCase, rather than lowercase.
-    2. With JSX you pass a function as the event handler, rather than a string.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 63. ### What will happen if you use `setState()` in constructor?
 
     When you use `setState()`, then apart from assigning to the object state React also re-renders the component and all its children. You would get error like this: *Can only update a mounted or mounting component.* So we need to use `this.state` to initialize variables inside constructor.
 
 
    **[⬆ Back to Top](#table-of-contents)**
+
+66. ### What will happen if you use props in initial state?
+
+    If the props on the component are changed without the component being refreshed, the new prop value will never be displayed because the constructor function will never update the current state of the component. The initialization of state from props only runs when the component is first created.
+
+    The below component won't display the updated input value:
+
+    ```jsx harmony
+    class MyComponent extends React.Component {
+      constructor(props) {
+        super(props)
+
+        this.state = {
+          records: [],
+          inputValue: this.props.inputValue
+        };
+      }
+
+      render() {
+        return <div>{this.state.inputValue}</div>
+      }
+    }
+    ```
+
+    Using props inside render method will update the value:
+
+    ```jsx harmony
+    class MyComponent extends React.Component {
+      constructor(props) {
+        super(props)
+
+        this.state = {
+          record: []
+        }
+      }
+
+      render() {
+        return <div>{this.props.inputValue}</div>
+      }
+    }
+    ```
+
+**[⬆ Back to Top](#table-of-contents)**
     
 64. ### What is the impact of indexes as keys?
 
@@ -1704,50 +1194,6 @@ You can download the PDF and Epub version of this repository from the latest run
             messages: [...result.data]
           })
         })
-    }
-    ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-66. ### What will happen if you use props in initial state?
-
-    If the props on the component are changed without the component being refreshed, the new prop value will never be displayed because the constructor function will never update the current state of the component. The initialization of state from props only runs when the component is first created.
-
-    The below component won't display the updated input value:
-
-    ```jsx harmony
-    class MyComponent extends React.Component {
-      constructor(props) {
-        super(props)
-
-        this.state = {
-          records: [],
-          inputValue: this.props.inputValue
-        };
-      }
-
-      render() {
-        return <div>{this.state.inputValue}</div>
-      }
-    }
-    ```
-
-    Using props inside render method will update the value:
-
-    ```jsx harmony
-    class MyComponent extends React.Component {
-      constructor(props) {
-        super(props)
-
-        this.state = {
-          record: []
-        }
-      }
-
-      render() {
-        return <div>{this.props.inputValue}</div>
-      }
     }
     ```
 
@@ -1884,44 +1330,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-72. ### How to enable production mode in React?
-
-    You should use Webpack's `DefinePlugin` method to set `NODE_ENV` to `production`, by which it strip out things like propType validation and extra warnings. Apart from this, if you minify the code, for example, Uglify's dead-code elimination to strip out development only code and comments, it will drastically reduce the size of your bundle.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-73. ### What is CRA and its benefits?
-
-    The `create-react-app` CLI tool allows you to quickly create & run React applications with no configuration step.
-
-    Let's create Todo App using *CRA*:
-
-    ```console
-    # Installation
-    $ npm install -g create-react-app
-
-    # Create new project
-    $ create-react-app todo-app
-    $ cd todo-app
-
-    # Build, test and run
-    $ npm run build
-    $ npm run test
-    $ npm start
-    ```
-    It includes everything we need to build a React app:
-
-    1. React, JSX, ES6, and Flow syntax support.
-    2. Language extras beyond ES6 like the object spread operator.
-    3. Autoprefixed CSS, so you don’t need -webkit- or other prefixes.
-    4. A fast interactive unit test runner with built-in support for coverage reporting.
-    5. A live development server that warns about common mistakes.
-    6. A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 74. ### What is the lifecycle methods order in mounting?
 
     The lifecycle methods are called in the following order when an instance of a component is being created and inserted into the DOM.
@@ -1934,80 +1342,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-75. ### What are the lifecycle methods going to be deprecated in React v16?
-
-    The following lifecycle methods going to be unsafe coding practices and will be more problematic with async rendering.
-
-    1. `componentWillMount()`
-    2. `componentWillReceiveProps()`
-    3. `componentWillUpdate()`
-
-    Starting with React v16.3 these methods are aliased with `UNSAFE_` prefix, and the unprefixed version will be removed in React v17.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-76. ### What is the purpose of `getDerivedStateFromProps()` lifecycle method?
-
-    The new static `getDerivedStateFromProps()` lifecycle method is invoked after a component is instantiated as well as before it is re-rendered. It can return an object to update state, or `null` to indicate that the new props do not require any state updates.
-
-    ```javascript
-    class MyComponent extends React.Component {
-      static getDerivedStateFromProps(props, state) {
-        // ...
-      }
-    }
-    ```
-
-    This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillReceiveProps()`.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-77. ### What is the purpose of `getSnapshotBeforeUpdate()` lifecycle method?
-
-    The new `getSnapshotBeforeUpdate()` lifecycle method is called right before DOM updates. The return value from this method will be passed as the third parameter to `componentDidUpdate()`.
-
-    ```javascript
-    class MyComponent extends React.Component {
-      getSnapshotBeforeUpdate(prevProps, prevState) {
-        // ...
-      }
-    }
-    ```
-
-    This lifecycle method along with `componentDidUpdate()` covers all the use cases of `componentWillUpdate()`.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 78. ### Do Hooks replace render props and higher order components?
 
     Both render props and higher-order components render only a single child but in most of the cases Hooks are a simpler way to serve this by reducing nesting in your tree.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-79. ### What is the recommended way for naming components?
-
-    It is recommended to name the component by reference instead of using `displayName`.
-
-    Using `displayName` for naming component:
-
-    ```javascript
-    export default React.createClass({
-      displayName: 'TodoApp',
-      // ...
-    })
-    ```
-
-    The **recommended** approach:
-
-    ```javascript
-    export default class TodoApp extends React.Component {
-      // ...
-    }
-    ```
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -2166,23 +1503,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-85. ### Why is `isMounted()` an anti-pattern and what is the proper solution?
-
-    The primary use case for `isMounted()` is to avoid calling `setState()` after a component has been unmounted, because it will emit a warning.
-
-    ```javascript
-    if (this.isMounted()) {
-      this.setState({...})
-    }
-    ```
-
-    Checking `isMounted()` before calling `setState()` does eliminate the warning, but it also defeats the purpose of the warning. Using `isMounted()` is a code smell because the only reason you would check is because you think you might be holding a reference after the component has unmounted.
-
-    An optimal solution would be to find places where `setState()` might be called after a component has unmounted, and fix them. Such situations most commonly occur due to callbacks, when a component is waiting for some data and gets unmounted before the data arrives. Ideally, any callbacks should be canceled in `componentWillUnmount()`, prior to unmounting.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 86. ### What are the Pointer Events supported in React?
 
     *Pointer Events* provide a unified way of handling all input events. In the old days we had a mouse and respective event listeners to handle them but nowadays we have many devices which don't correlate to having a mouse, like phones with touch surface or pens. We need to remember that these events will only work in browsers that support the *Pointer Events* specification.
@@ -2242,33 +1562,6 @@ You can download the PDF and Epub version of this repository from the latest run
               )
         }
     ```
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-88. ### Are custom DOM attributes supported in React v16?
-
-    Yes. In the past, React used to ignore unknown DOM attributes. If you wrote JSX with an attribute that React doesn't recognize, React would just skip it.
-
-    For example, let's take a look at the below attribute:
-
-    ```jsx harmony
-    <div mycustomattribute={'something'} />
-    ```
-
-    Would render an empty div to the DOM with React v15:
-
-    ```html
-    <div />
-    ```
-
-    In React v16 any unknown attributes will end up in the DOM:
-
-    ```html
-    <div mycustomattribute='something' />
-    ```
-
-    This is useful for supplying browser-specific non-standard attributes, trying new DOM APIs, and integrating with opinionated third-party libraries.
-
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -2373,29 +1666,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-93. ### How do you access props in attribute quotes?
-
-    React (or JSX) doesn't support variable interpolation inside an attribute value. The below representation won't work:
-
-    ```jsx harmony
-    <img className='image' src='images/{this.props.image}' />
-    ```
-
-    But you can put any JS expression inside curly braces as the entire attribute value. So the below expression works:
-
-    ```jsx harmony
-    <img className='image' src={'images/' + this.props.image} />
-    ```
-
-    Using *template strings* will also work:
-
-    ```jsx harmony
-    <img className='image' src={`images/${this.props.image}`} />
-    ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 94. ### What is React proptype array with shape?
 
     If you want to pass an array of objects to a component with a particular shape then use `React.PropTypes.shape()` as an argument to `React.PropTypes.arrayOf()`.
@@ -2407,29 +1677,6 @@ You can download the PDF and Epub version of this repository from the latest run
         fontSize: React.PropTypes.number.isRequired
       })).isRequired
     }
-    ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-95. ### How to conditionally apply class attributes?
-
-    You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
-
-    ```jsx harmony
-    <div className="btn-panel {this.props.visible ? 'show' : 'hidden'}">
-    ```
-
-    Instead you need to move curly braces outside (don't forget to include spaces between class names):
-
-    ```jsx harmony
-    <div className={'btn-panel ' + (this.props.visible ? 'show' : 'hidden')}>
-    ```
-
-    *Template strings* will also work:
-
-    ```jsx harmony
-    <div className={`btn-panel ${this.props.visible ? 'show' : 'hidden'}`}>
     ```
 
 
@@ -2447,78 +1694,6 @@ You can download the PDF and Epub version of this repository from the latest run
     The React team worked on extracting all DOM-related features into a separate library called *ReactDOM*. React v0.14 is the first release in which the libraries are split. By looking at some of the packages, `react-native`, `react-art`, `react-canvas`, and `react-three`, it has become clear that the beauty and essence of React has nothing to do with browsers or the DOM.
 
     To build more environments that React can render to, React team planned to split the main React package into two: `react` and `react-dom`. This paves the way to writing components that can be shared between the web version of React and React Native.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-98. ### How to use React label element?
-
-    If you try to render a `<label>` element bound to a text input using the standard `for` attribute, then it produces HTML missing that attribute and prints a warning to the console.
-
-    ```jsx harmony
-    <label for={'user'}>{'User'}</label>
-    <input type={'text'} id={'user'} />
-    ```
-
-    Since `for` is a reserved keyword in JavaScript, use `htmlFor` instead.
-
-    ```jsx harmony
-    <label htmlFor={'user'}>{'User'}</label>
-    <input type={'text'} id={'user'} />
-    ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-99. ### How to combine multiple inline style objects?
-
-    You can use *spread operator* in regular React:
-
-    ```jsx harmony
-     <button style={{...styles.panel.button, ...styles.panel.submitButton}}>{'Submit'}</button>
-    ```
-
-    If you're using React Native then you can use the array notation:
-
-    ```jsx harmony
-    <button style={[styles.panel.button, styles.panel.submitButton]}>{'Submit'}</button>
-    ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-100. ### How to re-render the view when the browser is resized?
-
-     You can listen to the `resize` event in `componentDidMount()` and then update the dimensions (`width` and `height`). You should remove the listener in `componentWillUnmount()` method.
-
-     ```javascript
-     class WindowDimensions extends React.Component {
-       constructor(props){
-         super(props);
-         this.updateDimensions = this.updateDimensions.bind(this);
-       }
-        
-       componentWillMount() {
-         this.updateDimensions()
-       }
-
-       componentDidMount() {
-         window.addEventListener('resize', this.updateDimensions)
-       }
-
-       componentWillUnmount() {
-         window.removeEventListener('resize', this.updateDimensions)
-       }
-
-       updateDimensions() {
-         this.setState({width: window.innerWidth, height: window.innerHeight})
-       }
-
-       render() {
-         return <span>{this.state.width} x {this.state.height}</span>
-       }
-     }
-     ```
 
 
    **[⬆ Back to Top](#table-of-contents)**
