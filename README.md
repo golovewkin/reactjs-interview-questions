@@ -51,6 +51,8 @@ You can download the PDF and Epub version of this repository from the latest run
 |37 | [What is context?](#what-is-context) |
 |38 | [What is children prop?](#what-is-children-prop) |
 |40 | [What is the purpose of using super constructor with props argument?](#what-is-the-purpose-of-using-super-constructor-with-props-argument) |
+|240| [What is the main purpose of constructor?](#what-is-the-main-purpose-of-constructor)|
+|241| [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)|
 |41 | [What is reconciliation?](#what-is-reconciliation) |
 |45 | [Why React uses className over class attribute?](#why-react-uses-classname-over-class-attribute) |
 |46 | [What are fragments?](#what-are-fragments) |
@@ -71,9 +73,9 @@ You can download the PDF and Epub version of this repository from the latest run
 |65 | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method) |
 |68 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements) |
 |69 | [How you use decorators in React?](#how-you-use-decorators-in-react) |
-|70 | [How do you memoize a component?](#how-do-you-memoize-a-component) |
 |71 | [How you implement Server-Side Rendering or SSR?](#how-you-implement-server-side-rendering-or-ssr) |
 |74 | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting) |
+|245| [What is the methods order when component re-rendered?](#what-is-the-methods-order-when-component-re-rendered)|
 |77 | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method) |
 |89 | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate) |
 |78 | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components) |
@@ -161,66 +163,30 @@ You can download the PDF and Epub version of this repository from the latest run
 |186| [How to set initial state in Redux?](#how-to-set-initial-state-in-redux) |
 |187| [How Relay is different from Redux?](#how-relay-is-different-from-redux) |
 |188| [What is an action in Redux?](#what-is-an-action-in-redux) |
-|   | **React Native** |
-|188| [What is the difference between React Native and React?](#what-is-the-difference-between-react-native-and-react) |
-|189| [How to test React Native apps?](#how-to-test-react-native-apps) |
-|190| [How to do logging in React Native?](#how-to-do-logging-in-react-native) |
-|191| [How to debug your React Native?](#how-to-debug-your-react-native) |
-|   | **React supported libraries and Integration** |
-|192| [What is reselect and how it works?](#what-is-reselect-and-how-it-works) |
-|193| [What is Flow?](#what-is-flow) |
-|194| [What is the difference between Flow and PropTypes?](#what-is-the-difference-between-flow-and-proptypes) |
-|195| [How to use font-awesome icons in React?](#how-to-use-font-awesome-icons-in-react) |
-|196| [What is React Dev Tools?](#what-is-react-dev-tools) |
-|197| [Why is DevTools not loading in Chrome for local files?](#why-is-devtools-not-loading-in-chrome-for-local-files) |
-|198| [How to use Polymer in React?](#how-to-use-polymer-in-react) |
-|199| [What are the advantages of React over Vue.js?](#what-are-the-advantages-of-react-over-vuejs) |
-|200| [What is the difference between React and Angular?](#what-is-the-difference-between-react-and-angular) |
-|201| [Why React tab is not showing up in DevTools?](#why-react-tab-is-not-showing-up-in-devtools) |
-|202| [What are styled components?](#what-are-styled-components) |
-|203| [Give an example of Styled Components?](#give-an-example-of-styled-components) |
-|204| [What is Relay?](#what-is-relay) |
-|205| [How to use TypeScript in create-react-app application?](#how-to-use-typescript-in-create-react-app-application) |
+
 |   | **Miscellaneous** |
 |206| [What are the main features of reselect library?](#what-are-the-main-features-of-reselect-library) |
 |207| [Give an example of reselect usage?](#give-an-example-of-reselect-usage) |
-|209| [Does the statics object work with ES6 classes in React?](#does-the-statics-object-work-with-es6-classes-in-react) |
 |210| [Can Redux only be used with React?](#can-redux-only-be-used-with-react) |
 |211| [Do you need to have a particular build tool to use Redux?](#do-you-need-to-have-a-particular-build-tool-to-use-redux) |
 |212| [How Redux Form initialValues get updated from state?](#how-redux-form-initialvalues-get-updated-from-state) |
-|213| [How React PropTypes allow different type for one prop?](#how-react-proptypes-allow-different-types-for-one-prop) |
-|214| [Can I import an SVG file as react component?](#can-i-import-an-svg-file-as-react-component) |
 |215| [Why are inline ref callbacks or functions not recommended?](#why-are-inline-ref-callbacks-or-functions-not-recommended)|
 |216| [What is render hijacking in React?](#what-is-render-hijacking-in-react)|
-|217| [What are HOC factory implementations?](#what-are-hoc-factory-implementations)|
-|218| [How to pass numbers to React component?](#how-to-pass-numbers-to-react-component)|
 |219| [Do I need to keep all my state into Redux? Should I ever use react internal state?](#do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-react-internal-state)|
-|220| [What is the purpose of registerServiceWorker in React?](#what-is-the-purpose-of-registerserviceworker-in-react)|
-|221| [What is React memo function?](#what-is-react-memo-function)|
 |222| [What is React lazy function?](#what-is-react-lazy-function)|
 |223| [How to prevent unnecessary updates using setState?](#how-to-prevent-unnecessary-updates-using-setstate)|
-|224| [How do you render Array, Strings and Numbers in React 16 Version?](#how-do-you-render-array-strings-and-numbers-in-react-16-version)|
-|225| [How to use class field declarations syntax in React classes?](#how-to-use-class-field-declarations-syntax-in-react-classes)|
 |226| [What are hooks?](#what-are-hooks)|
 |227| [What are the rules needs to follow for hooks?](#what-are-the-rules-needs-to-follow-for-hooks)|
 |228| [How to ensure hooks followed the rules in your project?](#how-to-ensure-hooks-followed-the-rules-in-your-project)|
 |229| [What are the differences between Flux and Redux?](#what-are-the-differences-between-flux-and-redux)|
-|230| [What are the benefits of React Router V4?](#what-are-the-benefits-of-react-router-v4)|
-|231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
 |232| [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)|
 |233| [Why do you not need error boundaries for event handlers?](#why-do-you-not-need-error-boundaries-for-event-handlers)|
 |234| [What is the difference between try catch block and error boundaries?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)|
 |235| [What is the behavior of uncaught errors in react 16?](#what-is-the-behavior-of-uncaught-errors-in-react-16)|
 |236| [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)|
-|237| [What is the benefit of component stack trace from error boundary?](#what-is-the-benefit-of-component-stack-trace-from-error-boundary)|
 |238| [What is the required method to be defined for a class component?](#what-is-the-required-method-to-be-defined-for-a-class-component)|
 |239| [What are the possible return types of render method?](#what-are-the-possible-return-types-of-render-method)|
-|240| [What is the main purpose of constructor?](#what-is-the-main-purpose-of-constructor)|
-|241| [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)|
-|242| [What are default props?](#what-are-default-props)|
 |243| [Why should not call setState in componentWillUnmount?](#why-should-not-call-setstate-in-componentwillunmount)|
-|244| [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)|
-|245| [What is the methods order when component re-rendered?](#what-is-the-methods-order-when-component-re-rendered)|
 |246| [What are the methods invoked during error handling?](#what-are-the-methods-invoked-during-error-handling)|
 |247| [What is the purpose of displayName class property?](#what-is-the-purpose-of-displayname-class-property)|
 |248| [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)|
@@ -823,6 +789,28 @@ You can download the PDF and Epub version of this repository from the latest run
 
 
    **[⬆ Back to Top](#table-of-contents)**
+
+240. ### What is the main purpose of constructor?
+     The constructor is mainly used for two purposes,
+
+    1. To initialize local state by assigning object to this.state
+    2. For binding event handler methods to the instance
+       For example, the below code covers both the above cases,
+     ```javascript
+     constructor(props) {
+       super(props);
+       // Don't call this.setState() here!
+       this.state = { counter: 0 };
+       this.handleClick = this.handleClick.bind(this);
+     }
+     ```
+
+**[⬆ Back to Top](#table-of-contents)**
+
+241. ### Is it mandatory to define constructor for React component?
+     No, it is not mandatory. i.e, If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.
+
+**[⬆ Back to Top](#table-of-contents)**
     
 41. ### What is reconciliation?
 
@@ -1228,38 +1216,17 @@ You can download the PDF and Epub version of this repository from the latest run
 
 
    **[⬆ Back to Top](#table-of-contents)**
-    
-70. ### How do you memoize a component?
 
-    There are memoize libraries available which can be used on function components.
+221. ### What is React memo function?
 
-    For example `moize` library can memoize the component in another component.
+     Class components can be restricted from rendering when their input props are the same using **PureComponent or shouldComponentUpdate**. Now you can do the same with function components by wrapping them in **React.memo**.
+     ```jsx
+     const MyComponent = React.memo(function MyComponent(props) {
+      /* only rerenders if props change */
+     });
+     ```
 
-    ```jsx harmony
-    import moize from 'moize'
-    import Component from './components/Component' // this module exports a non-memoized component
-
-    const MemoizedFoo = moize.react(Component)
-
-    const Consumer = () => {
-      <div>
-        {'I will memoize the following entry:'}
-        <MemoizedFoo/>
-      </div>
-    }
-    ```
-
-    **Update:** Since React v16.6.0, we have a `React.memo`. It provides a higher order component which memoizes component unless the props change. To use it, simply wrap the component using React.memo before you use it.
-
-    ```js
-      const MemoComponent = React.memo(function MemoComponent(props) {
-        /* render using props */
-      });
-      OR
-      export default React.memo(MyFunctionComponent);
-    ```
-
-   **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
     
 71. ### How you implement Server Side Rendering or SSR?
 
@@ -1288,6 +1255,19 @@ You can download the PDF and Epub version of this repository from the latest run
 
 
    **[⬆ Back to Top](#table-of-contents)**
+
+245. ### What is the methods order when component re-rendered?
+     An update can be caused by changes to props or state. The below methods are called in the following order when a component is being re-rendered.
+
+    1. static getDerivedStateFromProps()
+    2. shouldComponentUpdate()
+    3. render()
+    4. getSnapshotBeforeUpdate()
+    5. componentDidUpdate()
+
+
+**[⬆ Back to Top](#table-of-contents)**
+
 89. ### What is the difference between constructor and getInitialState?
 
     You should initialize state in the constructor when using ES6 classes, and `getInitialState()` method when using `React.createClass()`.
@@ -2852,275 +2832,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
 
-## React Native
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-188. ### What is the difference between React Native and React?
-
-     **React** is a JavaScript library, supporting both front end web and being run on the server, for building user interfaces and web applications.
-
-     **React Native** is a mobile framework that compiles to native app components, allowing you to build native mobile applications (iOS, Android, and Windows) in JavaScript that allows you to use React to build your components, and implements React under the hood.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-189. ### How to test React Native apps?
-
-     React Native can be tested only in mobile simulators like iOS and Android. You can run the app in your mobile using expo app (https://expo.io) Where it syncs using QR code, your mobile and computer should be in same wireless network.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-190. ### How to do logging in React Native?
-
-     You can use `console.log`, `console.warn`, etc. As of React Native v0.29 you can simply run the following to see logs in the console:
-
-     ```
-     $ react-native log-ios
-     $ react-native log-android
-     ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-191. ### How to debug your React Native?
-
-     Follow the below steps to debug React Native app:
-
-     1. Run your application in the iOS simulator.
-     2. Press `Command + D` and a webpage should open up at `http://localhost:8081/debugger-ui`.
-     3. Enable *Pause On Caught Exceptions* for a better debugging experience.
-     4. Press `Command + Option + I` to open the Chrome Developer tools, or open it via `View` -> `Developer` -> `Developer Tools`.
-     5. You should now be able to debug as you normally would.
-
-## React supported libraries & Integration
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-192. ### What is reselect and how it works?
-
-     *Reselect* is a **selector library** (for Redux) which uses *memoization* concept. It was originally written to compute derived data from Redux-like applications state, but it can't be tied to any architecture or library.
-
-     Reselect keeps a copy of the last inputs/outputs of the last call, and recomputes the result only if one of the inputs changes. If the the same inputs are provided twice in a row, Reselect returns the cached output. It's memoization and cache are fully customizable.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-193. ### What is Flow?
-
-     *Flow* is a *static type checker* designed to find type errors in JavaScript. Flow types can express much more fine-grained distinctions than traditional type systems. For example, Flow helps you catch errors involving `null`, unlike most type systems.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-194. ### What is the difference between Flow and PropTypes?
-
-     Flow is a *static analysis tool* (static checker) which uses a superset of the language, allowing you to add type annotations to all of your code and catch an entire class of bugs at compile time.
-
-     PropTypes is a *basic type checker* (runtime checker) which has been patched onto React. It can't check anything other than the types of the props being passed to a given component. If you want more flexible typechecking for your entire project Flow/TypeScript are appropriate choices.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-195. ### How to use Font Awesome icons in React?
-
-     The below steps followed to include Font Awesome in React:
-
-     1. Install `font-awesome`:
-
-         ```console
-         $ npm install --save font-awesome
-         ```
-
-     2. Import `font-awesome` in your `index.js` file:
-
-         ```javascript
-         import 'font-awesome/css/font-awesome.min.css'
-         ```
-
-     3. Add Font Awesome classes in `className`:
-
-         ```javascript
-         render() {
-           return <div><i className={'fa fa-spinner'} /></div>
-         }
-         ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-196. ### What is React Dev Tools?
-
-     *React Developer Tools* let you inspect the component hierarchy, including component props and state. It exists both as a browser extension (for Chrome and Firefox), and as a standalone app (works with other environments including Safari, IE, and React Native).
-
-     The official extensions available for different browsers or environments.
-     1. **Chrome extension**
-     2. **Firefox extension**
-     3. **Standalone app** (Safari, React Native, etc)
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-197. ### Why is DevTools not loading in Chrome for local files?
-
-     If you opened a local HTML file in your browser (`file://...`) then you must first open *Chrome Extensions* and check `Allow access to file URLs`.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-198. ### How to use Polymer in React?
-     You need to follow below steps to use Polymer in React,
-
-     1. Create a Polymer element:
-
-         ```jsx harmony
-         <link rel='import' href='../../bower_components/polymer/polymer.html' />
-         Polymer({
-           is: 'calender-element',
-           ready: function() {
-             this.textContent = 'I am a calender'
-           }
-         })
-         ```
-
-     2. Create the Polymer component HTML tag by importing it in a HTML document, e.g. import it in the `index.html` of your React application:
-
-         ```html
-         <link rel='import' href='./src/polymer-components/calender-element.html'>
-         ```
-
-     3. Use that element in the JSX file:
-
-         ```javascript
-         import React from 'react'
-
-         class MyComponent extends React.Component {
-           render() {
-             return (
-               <calender-element />
-             )
-           }
-         }
-
-         export default MyComponent
-         ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-199. ### What are the advantages of React over Vue.js?
-
-     React has the following advantages over Vue.js:
-
-     1. Gives more flexibility in large apps developing.
-     2. Easier to test.
-     3. Suitable for mobile apps creating.
-     4. More information and solutions available.
-
-   **Note:** The above list of advantages are purely opinionated and it vary based on the professional experience. But they are helpful as base parameters.
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-200. ### What is the difference between React and Angular?
-     Let's see the difference between React and Angular in a table format.
-
-     | React | Angular |
-     | ----- | ------- |
-     | React is a library and has only the View layer | Angular is a framework and has complete MVC functionality |
-     | React handles rendering on the server side | AngularJS renders only on the client side but Angular 2 and above renders on the server side |
-     | React uses JSX that looks like HTML in JS which can be confusing | Angular follows the template approach for HTML, which makes code shorter and easy to understand |
-     | React Native, which is a React type to build mobile applications are faster and more stable | Ionic, Angular's mobile native app is relatively less stable and slower |
-     | In React, data flows only in one way and hence debugging is easy | In Angular, data flows both way i.e it has two-way data binding between children and parent and hence debugging is often difficult |
-
-   **Note:** The above list of differences are purely opinionated and it vary based on the professional experience. But they are helpful as base parameters.
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-201. ### Why React tab is not showing up in DevTools?
-
-     When the page loads, *React DevTools* sets a global named `__REACT_DEVTOOLS_GLOBAL_HOOK__`, then React communicates with that hook during initialization. If the website is not using React or if React fails to communicate with DevTools then it won't show up the tab.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-202. ### What are Styled Components?
-
-     `styled-components` is a JavaScript library for styling React applications. It removes the mapping between styles and components, and lets you write actual CSS augmented with JavaScript.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-203. ### Give an example of Styled Components?
-
-     Lets create `<Title>` and `<Wrapper>` components with specific styles for each.
-
-     ```javascript
-     import React from 'react'
-     import styled from 'styled-components'
-
-     // Create a <Title> component that renders an <h1> which is centered, red and sized at 1.5em
-     const Title = styled.h1`
-       font-size: 1.5em;
-       text-align: center;
-       color: palevioletred;
-     `
-
-     // Create a <Wrapper> component that renders a <section> with some padding and a papayawhip background
-     const Wrapper = styled.section`
-       padding: 4em;
-       background: papayawhip;
-     `
-     ```
-
-     These two variables, `Title` and `Wrapper`, are now components that you can render just like any other react component.
-
-     ```jsx harmony
-     <Wrapper>
-       <Title>{'Lets start first styled component!'}</Title>
-     </Wrapper>
-     ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-204. ### What is Relay?
-
-     Relay is a JavaScript framework for providing a data layer and client-server communication to web applications using the React view layer.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-205. ### How to use TypeScript in `create-react-app` application?
-     Starting from react-scripts@2.1.0 or higher, there is a built-in support for typescript. i.e, `create-react-app` now supports typescript natively. You can just pass `--typescript` option as below
-     ```bash
-     npx create-react-app my-app --typescript
-
-     # or
-
-     yarn create react-app my-app --typescript
-     ```
-     But for lower versions of react scripts, just supply `--scripts-version` option as `react-scripts-ts` while you create a new project. `react-scripts-ts` is a set of adjustments to take the standard `create-react-app` project pipeline and bring TypeScript into the mix.
-
-     Now the project layout should look like the following:
-
-     ```
-     my-app/
-     ├─ .gitignore
-     ├─ images.d.ts
-     ├─ node_modules/
-     ├─ public/
-     ├─ src/
-     │  └─ ...
-     ├─ package.json
-     ├─ tsconfig.json
-     ├─ tsconfig.prod.json
-     ├─ tsconfig.test.json
-     └─ tslint.json
-     ```
-
 ## Miscellaneous
 
 
@@ -3179,58 +2890,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-209. ### Does the statics object work with ES6 classes in React?
-
-     No, `statics` only works with `React.createClass()`:
-
-     ```javascript
-     someComponent= React.createClass({
-       statics: {
-         someMethod: function() {
-           // ..
-         }
-       }
-     })
-     ```
-
-     But you can write statics inside ES6+ classes as below,
-
-     ```javascript
-     class Component extends React.Component {
-       static propTypes = {
-         // ...
-       }
-
-       static someMethod() {
-         // ...
-       }
-     }
-     ```
-
-     or writing them outside class as below,
-
-     ```javascript
-     class Component extends React.Component {
-        ....
-     }
-
-     Component.propTypes = {...}
-     Component.someMethod = function(){....}
-     ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 210. ### Can Redux only be used with React?
 
      Redux can be used as a data store for any UI layer. The most common usage is with React and React Native, but there are bindings available for Angular, Angular 2, Vue, Mithril, and more. Redux simply provides a subscription mechanism which can be used by any other code.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-211. ### Do you need to have a particular build tool to use Redux?
-
-     Redux is originally written in ES6 and transpiled for production into ES5 with Webpack and Babel. You should be able to use it regardless of your JavaScript build process. Redux also offers a UMD build that can be used directly without any build process at all.
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -3247,44 +2909,6 @@ You can download the PDF and Epub version of this repository from the latest run
      ```
 
      If your `initialValues` prop gets updated, your form will update too.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-213. ### How React PropTypes allow different types for one prop?
-
-     You can use `oneOfType()` method of `PropTypes`.
-
-     For example, the height property can be defined with either `string` or `number` type as below:
-
-     ```javascript
-     Component.propTypes = {
-       size: PropTypes.oneOfType([
-         PropTypes.string,
-         PropTypes.number
-       ])
-     }
-     ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-214. ### Can I import an SVG file as react component?
-
-     You can import SVG directly as component instead of loading it as a file. This feature is available with `react-scripts@2.0.0` and higher.
-
-     ```jsx harmony
-     import { ReactComponent as Logo } from './logo.svg'
-
-     const App = () => (
-       <div>
-         {/* Logo is an actual react component */}
-         <Logo />
-       </div>
-     )
-     ```
-
-     **Note**: Don't forget about the curly braces in the import.
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -3348,54 +2972,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-217. ### What are HOC factory implementations?
-     There are two main ways of implementing HOCs in React.
-
-     1. Props Proxy (PP) and
-     2. Inheritance Inversion (II).
-
-     But they follow different approaches for manipulating the *WrappedComponent*.
-
-     **Props Proxy**
-
-     In this approach, the render method of the HOC returns a React Element of the type of the WrappedComponent. We also pass through the props that the HOC receives, hence the name **Props Proxy**.
-
-     ```jsx
-
-     function ppHOC(WrappedComponent) {
-      return class PP extends React.Component {
-        render() {
-          return <WrappedComponent {...this.props}/>
-        }
-      }
-     }
-     ```
-     **Inheritance Inversion**
-
-     In this approach, the returned HOC class (Enhancer) extends the WrappedComponent. It is called Inheritance Inversion because instead of the WrappedComponent extending some Enhancer class, it is passively extended by the Enhancer. In this way the relationship between them seems **inverse**.
-
-     ```jsx
-     function iiHOC(WrappedComponent) {
-      return class Enhancer extends WrappedComponent {
-        render() {
-          return super.render()
-        }
-      }
-     }
-     ```
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-218. ### How to pass numbers to React component?
-
-     You should be passing the numbers via curly braces({}) where as strings in quotes
-
-     ```jsx
-        React.render(<User age={30} department={"IT"} />, document.getElementById('container'));
-     ```
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 219. ### Do I need to keep all my state into Redux? Should I ever use react internal state?
      It is up to developer decision. i.e, It is developer job to determine what kinds of state make up your application, and where each piece of state should live. Some users prefer to keep every single piece of data in Redux, to maintain a fully serializable and controlled version of their application at all times. Others prefer to keep non-critical or UI state, such as “is this dropdown currently open”, inside a component's internal state.
 
@@ -3406,33 +2982,6 @@ You can download the PDF and Epub version of this repository from the latest run
      4. Is there value to you in being able to restore this state to a given point in time (ie, time travel debugging)?
      5. Do you want to cache the data (i.e, use what's in state if it's already there instead of re-requesting it)?
 
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-220. ### What is the purpose of registerServiceWorker in React?
-
-     React creates a service worker for you without any configuration by default. The service worker is a web API that helps you cache your assets and other files so that when the user is offline or on slow network, he/she can still see results on the screen, as such, it helps you build a better user experience, that's what you should know about service worker's for now. It's all about adding offline capabilities to your site.
-
-     ```jsx
-        import React from 'react';
-        import ReactDOM from 'react-dom';
-        import App from './App';
-        import registerServiceWorker from './registerServiceWorker';
-
-        ReactDOM.render(<App />, document.getElementById('root'));
-        registerServiceWorker();
-     ```
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-221. ### What is React memo function?
-
-     Class components can be restricted from rendering when their input props are the same using **PureComponent or shouldComponentUpdate**. Now you can do the same with function components by wrapping them in **React.memo**.
-     ```jsx
-     const MyComponent = React.memo(function MyComponent(props) {
-      /* only rerenders if props change */
-     });
-     ```
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -3469,82 +3018,6 @@ You can download the PDF and Epub version of this repository from the latest run
          }
        });
      };
-     ```
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-224. ### How do you render Array, Strings and Numbers in React 16 Version?
-     **Arrays**: Unlike older releases, you don't need to make sure **render** method return a single element in React16. You are able to return multiple sibling elements without a wrapping element by returning an array.
-
-     For example, let us take the below list of developers,
-
-     ```jsx
-     const ReactJSDevs = () => {
-       return [
-         <li key="1">John</li>,
-         <li key="2">Jackie</li>,
-         <li key="3">Jordan</li>
-       ];
-     }
-     ```
-     You can also merge this array of items in another array component.
-     ```jsx
-     const JSDevs = () => {
-       return (
-         <ul>
-           <li>Brad</li>
-           <li>Brodge</li>
-           <ReactJSDevs/>
-           <li>Brandon</li>
-         </ul>
-       );
-     }
-     ```
-     **Strings and Numbers:** You can also return string and number type from the render method.
-
-     ```jsx
-     render() {
-      return 'Welcome to ReactJS questions';
-     }
-     // Number
-     render() {
-      return 2018;
-     }
-     ```
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-225. ### How to use class field declarations syntax in React classes?
-     React Class Components can be made much more concise using the class field declarations. You can initialize local state without using the constructor and declare class methods by using arrow functions without the extra need to bind them.
-
-     Let's take a counter example to demonstrate class field declarations for state without using constructor and methods without binding,
-     ```jsx
-     class Counter extends Component {
-       state = { value: 0 };
-
-       handleIncrement = () => {
-         this.setState(prevState => ({
-           value: prevState.value + 1
-         }));
-       };
-
-       handleDecrement = () => {
-         this.setState(prevState => ({
-           value: prevState.value - 1
-         }));
-       };
-
-       render() {
-         return (
-           <div>
-             {this.state.value}
-
-             <button onClick={this.handleIncrement}>+</button>
-             <button onClick={this.handleDecrement}>-</button>
-           </div>
-         )
-       }
-     }
      ```
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -3618,27 +3091,6 @@ You can download the PDF and Epub version of this repository from the latest run
      | All the stores are disconnected and flat | Single store with hierarchical reducers|
      | It has a singleton dispatcher | There is no concept of dispatcher |
      | React components subscribe to the store | Container components uses connect function|
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-230. ### What are the benefits of React Router V4?
-     Below are the main benefits of React Router V4 module,
-
-     1. In React Router v4(version 4), the API is completely about components. A router can be visualized as a single component(`<BrowserRouter>`) which wraps specific child router components(`<Route>`).
-     2. You don't need to manually set history. The router module will take care history by wrapping routes with  `<BrowserRouter>` component.
-     3. The application size is reduced by adding only the specific router module(Web, core, or native)
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-231. ### Can you describe about componentDidCatch lifecycle method signature?
-     The **componentDidCatch** lifecycle method is invoked after an error has been thrown by a descendant component. The method receives two parameters,
-     1. error: - The error object which was thrown
-     2. info: - An object with a componentStack key contains the information about which component threw the error.
-
-     The method structure would be as follows
-     ```javascript
-     componentDidCatch(error, info)
-     ```
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -3721,16 +3173,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-237. ### What is the benefit of component stack trace from error boundary?
-     Apart from error messages and javascript stack, React16 will display the component stack trace with file names and line numbers using error boundary concept.
-
-     For example, BuggyCounter component displays the component stack trace as below,
-
-     ![stacktrace](images/error_boundary.png)
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 238. ### What is the required method to be defined for a class component?
      The `render()` method is the only required method in a class component. i.e, All methods other than render method are optional for a class component.
 
@@ -3748,101 +3190,8 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-240. ### What is the main purpose of constructor?
-     The constructor is mainly used for two purposes,
-
-     1. To initialize local state by assigning object to this.state
-     2. For binding event handler methods to the instance
-     For example, the below code covers both the above cases,
-     ```javascript
-     constructor(props) {
-       super(props);
-       // Don't call this.setState() here!
-       this.state = { counter: 0 };
-       this.handleClick = this.handleClick.bind(this);
-     }
-     ```
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-241. ### Is it mandatory to define constructor for React component?
-     No, it is not mandatory. i.e, If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-242. ### What are default props?
-     The defaultProps are defined as a property on the component class to set the default props for the class. This is used for undefined props, but not for null props.
-
-     For example, let us create color default prop for the button component,
-
-     ```javascript
-     class MyButton extends React.Component {
-       // ...
-     }
-
-     MyButton.defaultProps = {
-       color: 'red'
-     };
-
-     ```
-
-     If props.color is not provided then it will set the default value to 'red'. i.e, Whenever you try to access the color prop it uses default value
-     ```javascript
-     render() {
-        return <MyButton /> ; // props.color will be set to red
-      }
-     ```
-     **Note:** If you provide null value then it remains null value.
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 243. ### Why should not call setState in componentWillUnmount?
      You should not call `setState()` in `componentWillUnmount()` because once a component instance is unmounted, it will never be mounted again.
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-244. ### What is the purpose of getDerivedStateFromError?
-     This lifecycle method is invoked after an error has been thrown by a descendant component. It receives the error that was thrown as a parameter and should return a value to update state.
-
-     The signature of the lifecycle method is as follows,
-     ```javascript
-     static getDerivedStateFromError(error)
-     ```
-     Let us take error boundary use case with the above lifecycle method for demonstration purpose,
-     ```javascript
-     class ErrorBoundary extends React.Component {
-       constructor(props) {
-         super(props);
-         this.state = { hasError: false };
-       }
-
-       static getDerivedStateFromError(error) {
-         // Update state so the next render will show the fallback UI.
-         return { hasError: true };
-       }
-
-       render() {
-         if (this.state.hasError) {
-           // You can render any custom fallback UI
-           return <h1>Something went wrong.</h1>;
-         }
-
-         return this.props.children;
-       }
-     }
-     ```
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-245. ### What is the methods order when component re-rendered?
-     An update can be caused by changes to props or state. The below methods are called in the following order when a component is being re-rendered.
-
-     1. static getDerivedStateFromProps()
-     2. shouldComponentUpdate()
-     3. render()
-     4. getSnapshotBeforeUpdate()
-     5. componentDidUpdate()
-
 
    **[⬆ Back to Top](#table-of-contents)**
     
