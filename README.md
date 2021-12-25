@@ -69,13 +69,13 @@ You can download the PDF and Epub version of this repository from the latest run
 |66 | [What will happen if you use props in initial state?](#what-will-happen-if-you-use-props-in-initial-state) |
 |64 | [What is the impact of indexes as keys?](#what-is-the-impact-of-indexes-as-keys) |
 |65 | [Is it good to use setState() in componentWillMount() method?](#is-it-good-to-use-setstate-in-componentwillmount-method) |
-|67 | [How do you conditionally render components?](#how-do-you-conditionally-render-components)
 |68 | [Why we need to be careful when spreading props on DOM elements??](#why-we-need-to-be-careful-when-spreading-props-on-dom-elements) |
 |69 | [How you use decorators in React?](#how-you-use-decorators-in-react) |
 |70 | [How do you memoize a component?](#how-do-you-memoize-a-component) |
 |71 | [How you implement Server-Side Rendering or SSR?](#how-you-implement-server-side-rendering-or-ssr) |
 |74 | [What is the lifecycle methods order in mounting?](#what-is-the-lifecycle-methods-order-in-mounting) |
 |77 | [What is the purpose of getSnapshotBeforeUpdate() lifecycle method?](#what-is-the-purpose-of-getsnapshotbeforeupdate-lifecycle-method) |
+|89 | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate) |
 |78 | [Do Hooks replace render props and higher order components?](#do-hooks-replace-render-props-and-higher-order-components) |
 |80 | [What is the recommended ordering of methods in component class?](#what-is-the-recommended-ordering-of-methods-in-component-class) |
 |81 | [What is a switching component?](#what-is-a-switching-component) |
@@ -83,8 +83,6 @@ You can download the PDF and Epub version of this repository from the latest run
 |83 | [What is strict mode in React?](#what-is-strict-mode-in-react) |
 |84 | [What are React Mixins?](#what-are-react-mixins) |
 |86 | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react) |
-|87 | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter) |
-|89 | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate) |
 |90 | [Can you force a component to re-render without calling setState?](#can-you-force-a-component-to-re-render-without-calling-setstate) |
 |91 | [What is the difference between super() and super(props) in React using ES6 classes?](#what-is-the-difference-between-super-and-superprops-in-react-using-es6-classes) |
 |92 | [How to loop inside JSX?](#how-to-loop-inside-jsx) |
@@ -100,23 +98,14 @@ You can download the PDF and Epub version of this repository from the latest run
 |107| [How to focus an input element on page load?](#how-to-focus-an-input-element-on-page-load) |
 |108| [What are the possible ways of updating objects in state?](#what-are-the-possible-ways-of-updating-objects-in-state) |
 |110| [How can we find the version of React at runtime in the browser?](#how-can-we-find-the-version-of-react-at-runtime-in-the-browser) |
-|111| [What are the approaches to include polyfills in your create-react-app?](#what-are-the-approaches-to-include-polyfills-in-your-create-react-app) |
 |112| [How to use https instead of http in create-react-app?](#how-to-use-https-instead-of-http-in-create-react-app) |
-|113| [How to avoid using relative path imports in create-react-app?](#how-to-avoid-using-relative-path-imports-in-create-react-app) |
 |114| [How to add Google Analytics for react-router?](#how-to-add-google-analytics-for-react-router) |
-|115| [How to update a component every second?](#how-to-update-a-component-every-second) |
-|116| [How do you apply vendor prefixes to inline styles in React?](#how-do-you-apply-vendor-prefixes-to-inline-styles-in-react) |
 |117| [How to import and export components using react and ES6?](#how-to-import-and-export-components-using-react-and-es6) |
-|118| [What are the exceptions on React component naming?](#what-are-the-exceptions-on-react-component-naming) |
 |119| [Why is a component constructor called only once?](#why-is-a-component-constructor-called-only-once) |
 |120| [How to define constants in React?](#how-to-define-constants-in-react) |
 |121| [How to programmatically trigger click event in React?](#how-to-programmatically-trigger-click-event-in-react) |
-|122| [Is it possible to use async/await in plain React?](#is-it-possible-to-use-asyncawait-in-plain-react) |
-|123| [What are the common folder structures for React?](#what-are-the-common-folder-structures-for-react) |
 |124| [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation) |
 |125| [What is the benefit of styles modules?](#what-is-the-benefit-of-styles-modules) |
-|126| [What are the popular React-specific linters?](#what-are-the-popular-react-specific-linters) |
-|127| [How to make AJAX call and In which component lifecycle methods should I make an AJAX call?](#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call) |
 |128| [What are render props?](#what-are-render-props) |
 |   | **React Router** |
 |129| [What is React Router?](#what-is-react-router) |
@@ -124,26 +113,16 @@ You can download the PDF and Epub version of this repository from the latest run
 |131| [What are the \<Router> components of React Router v4?](#what-are-the-router-components-of-react-router-v4) |
 |132| [What is the purpose of push and replace methods of history?](#what-is-the-purpose-of-push-and-replace-methods-of-history) |
 |133| [How do you programmatically navigate using React router v4?](#how-do-you-programmatically-navigate-using-react-router-v4) |
-|134| [How to get query parameters in React Router v4](#how-to-get-query-parameters-in-react-router-v4) |
-|135| [Why you get "Router may have only one child element" warning?](#why-you-get-router-may-have-only-one-child-element-warning) |
 |136| [How to pass params to history.push method in React Router v4?](#how-to-pass-params-to-historypush-method-in-react-router-v4) |
-|137| [How to implement default or NotFound page?](#how-to-implement-default-or-notfound-page) |
 |138| [How to get history on React Router v4?](#how-to-get-history-on-react-router-v4) |
-|139| [How to perform automatic redirect after login?](#how-to-perform-automatic-redirect-after-login) |
-|   | **React Internationalization** |
-|140| [What is React-Intl?](#what-is-react-intl) |
-|141| [What are the main features of React Intl?](#what-are-the-main-features-of-react-intl) |
-|142| [What are the two ways of formatting in React Intl?](#what-are-the-two-ways-of-formatting-in-react-intl) |
-|143| [How to use FormattedMessage as placeholder using React Intl?](#how-to-use-formattedmessage-as-placeholder-using-react-intl) |
-|144| [How to access current locale with React Intl](#how-to-access-current-locale-with-react-intl) |
-|145| [How to format date using React Intl?](#how-to-format-date-using-react-intl) |
+
 |   | **React Testing** |
 |146| [What is Shallow Renderer in React testing?](#what-is-shallow-renderer-in-react-testing) |
 |147| [What is TestRenderer package in React?](#what-is-testrenderer-package-in-react) |
 |148| [What is the purpose of ReactTestUtils package?](#what-is-the-purpose-of-reacttestutils-package) |
 |149| [What is Jest?](#what-is-jest) |
 |150| [What are the advantages of Jest over Jasmine?](#what-are-the-advantages-of-jest-over-jasmine) |
-|151| [Give a simple example of Jest test case](#give-a-simple-example-of-jest-test-case) |
+
 |   | **React Redux** |
 |152| [What is Flux?](#what-is-flux) |
 |153| [What is Redux?](#what-is-redux) |
@@ -1200,38 +1179,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-67. ### How do you conditionally render components?
-
-    In some cases you want to render different components depending on some state. JSX does not render `false` or `undefined`, so you can use conditional *short-circuiting* to render a given part of your component only if a certain condition is true.
-
-    ```jsx harmony
-    const MyComponent = ({ name, address }) => (
-      <div>
-        <h2>{name}</h2>
-        {address &&
-          <p>{address}</p>
-        }
-      </div>
-    )
-    ```
-
-    If you need an `if-else` condition then use *ternary operator*.
-
-    ```jsx harmony
-    const MyComponent = ({ name, address }) => (
-      <div>
-        <h2>{name}</h2>
-        {address
-          ? <p>{address}</p>
-          : <p>{'Address is not available'}</p>
-        }
-      </div>
-    )
-    ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 68. ### Why we need to be careful when spreading props on DOM elements?
 
     When we *spread props* we run into the risk of adding unknown HTML attributes, which is a bad practice. Instead we can use prop destructuring with `...rest` operator, so it will add only required props.
@@ -1341,6 +1288,35 @@ You can download the PDF and Epub version of this repository from the latest run
 
 
    **[⬆ Back to Top](#table-of-contents)**
+89. ### What is the difference between constructor and getInitialState?
+
+    You should initialize state in the constructor when using ES6 classes, and `getInitialState()` method when using `React.createClass()`.
+
+    **Using ES6 classes:**
+
+    ```javascript
+    class MyComponent extends React.Component {
+      constructor(props) {
+        super(props)
+        this.state = { /* initial state */ }
+      }
+    }
+    ```
+
+    **Using `React.createClass()`:**
+
+    ```javascript
+    const MyComponent = React.createClass({
+      getInitialState() {
+        return { /* initial state */ }
+      }
+    })
+    ```
+
+    **Note:** `React.createClass()` is deprecated and removed in React v16. Use plain JavaScript classes instead.
+
+
+**[⬆ Back to Top](#table-of-contents)**
     
 78. ### Do Hooks replace render props and higher order components?
 
@@ -1519,78 +1495,6 @@ You can download the PDF and Epub version of this repository from the latest run
     8. `onPointerLeave`
     9. `onPointerOver`
     10. `onPointerOut`
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-87. ### Why should component names start with capital letter?
-
-    If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as unrecognized tag. This convention is because only HTML elements and SVG tags can begin with a lowercase letter.
-    ```jsx harmony
-    class SomeComponent extends Component {
-     // Code goes here
-    }
-    ```
-    You can define component class which name starts with lowercase letter, but when it's imported it should have capital letter. Here lowercase is fine:
-
-    ```jsx harmony
-    class myComponent extends Component {
-      render() {
-        return <div />
-      }
-    }
-
-    export default myComponent
-    ```
-
-    While when imported in another file it should start with capital letter:
-
-    ```jsx harmony
-    import MyComponent from './MyComponent'
-    ```
-
-
-    #### What are the exceptions on React component naming?
-
-    The component names should start with a uppercase letter but there are few exceptions on this convention. The lowercase tag names with a dot (property accessors) are still considered as valid component names.
-    For example the below tag can be compiled to a valid component,
-
-    ```jsx harmony
-         render() {
-              return (
-                <obj.component/> // `React.createElement(obj.component)`
-              )
-        }
-    ```
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-89. ### What is the difference between constructor and getInitialState?
-
-    You should initialize state in the constructor when using ES6 classes, and `getInitialState()` method when using `React.createClass()`.
-
-    **Using ES6 classes:**
-
-    ```javascript
-    class MyComponent extends React.Component {
-      constructor(props) {
-        super(props)
-        this.state = { /* initial state */ }
-      }
-    }
-    ```
-
-    **Using `React.createClass()`:**
-
-    ```javascript
-    const MyComponent = React.createClass({
-      getInitialState() {
-        return { /* initial state */ }
-      }
-    })
-    ```
-
-    **Note:** `React.createClass()` is deprecated and removed in React v16. Use plain JavaScript classes instead.
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -1883,33 +1787,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-111. ### What are the approaches to include polyfills in your `create-react-app`?
-
-     There are approaches to include polyfills in create-react-app,
-
-     1. **Manual import from `core-js`:**
-
-         Create a file called (something like) `polyfills.js` and import it into root `index.js` file. Run `npm install core-js` or `yarn add core-js` and import your specific required features.
-
-         ```javascript
-         import 'core-js/fn/array/find'
-         import 'core-js/fn/array/includes'
-         import 'core-js/fn/number/is-nan'
-         ```
-
-     2. **Using Polyfill service:**
-
-         Use the polyfill.io CDN to retrieve custom, browser-specific polyfills by adding this line to `index.html`:
-
-         ```html
-         <script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes'></script>
-         ```
-
-         In the above script we had to explicitly request the `Array.prototype.includes` feature as it is not included in the default feature set.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 112. ### How to use https instead of http in create-react-app?
 
      You just need to use `HTTPS=true` configuration. You can edit your `package.json` scripts section:
@@ -1921,19 +1798,6 @@ You can download the PDF and Epub version of this repository from the latest run
      ```
 
      or just run `set HTTPS=true && npm start`
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-113. ### How to avoid using relative path imports in create-react-app?
-
-     Create a file called `.env` in the project root and write the import path:
-
-     ```
-     NODE_PATH=src/app
-     ```
-
-     After that restart the development server. Now you should be able to import anything inside `src/app` without relative paths.
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -1951,38 +1815,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
 
    **[⬆ Back to Top](#table-of-contents)**
-    
-115. ### How to update a component every second?
 
-     You need to use `setInterval()` to trigger the change, but you also need to clear the timer when the component unmounts to prevent errors and memory leaks.
-
-     ```javascript
-     componentDidMount() {
-       this.interval = setInterval(() => this.setState({ time: Date.now() }), 1000)
-     }
-
-     componentWillUnmount() {
-       clearInterval(this.interval)
-     }
-     ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-116. ### How do you apply vendor prefixes to inline styles in React?
-
-     React *does not* apply *vendor prefixes* automatically. You need to add vendor prefixes manually.
-
-     ```jsx harmony
-     <div style={{
-       transform: 'rotate(90deg)',
-       WebkitTransform: 'rotate(90deg)', // note the capital 'W' here
-       msTransform: 'rotate(90deg)' // 'ms' is the only lowercase vendor prefix
-     }} />
-     ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
     
 117. ### How to import and export components using React and ES6?
 
@@ -2051,67 +1884,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-122. ### Is it possible to use async/await in plain React?
-
-     If you want to use `async`/`await` in React, you will need *Babel* and [transform-async-to-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) plugin. React Native ships with Babel and a set of transforms.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-123. ### What are the common folder structures for React?
-
-     There are two common practices for React project file structure.
-
-     1. **Grouping by features or routes:**
-
-         One common way to structure projects is locate CSS, JS, and tests together, grouped by feature or route.
-
-         ```
-         common/
-         ├─ Avatar.js
-         ├─ Avatar.css
-         ├─ APIUtils.js
-         └─ APIUtils.test.js
-         feed/
-         ├─ index.js
-         ├─ Feed.js
-         ├─ Feed.css
-         ├─ FeedStory.js
-         ├─ FeedStory.test.js
-         └─ FeedAPI.js
-         profile/
-         ├─ index.js
-         ├─ Profile.js
-         ├─ ProfileHeader.js
-         ├─ ProfileHeader.css
-         └─ ProfileAPI.js
-         ```
-
-     2. **Grouping by file type:**
-
-         Another popular way to structure projects is to group similar files together.
-
-         ```
-         api/
-         ├─ APIUtils.js
-         ├─ APIUtils.test.js
-         ├─ ProfileAPI.js
-         └─ UserAPI.js
-         components/
-         ├─ Avatar.js
-         ├─ Avatar.css
-         ├─ Feed.js
-         ├─ Feed.css
-         ├─ FeedStory.js
-         ├─ FeedStory.test.js
-         ├─ Profile.js
-         ├─ ProfileHeader.js
-         └─ ProfileHeader.css
-         ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 124. ### What are the popular packages for animation?
 
      *React Transition Group* and *React Motion* are popular animation packages in React ecosystem.
@@ -2145,68 +1917,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
      ```javascript
      import { space, colors } from './styles'
-     ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-126. ### What are the popular React-specific linters?
-
-     ESLint is a popular JavaScript linter. There are plugins available that analyse specific code styles. One of the most common for React is an npm package called `eslint-plugin-react`. By default, it will check a number of best practices, with rules checking things from keys in iterators to a complete set of prop types.
-
-     Another popular plugin is `eslint-plugin-jsx-a11y`, which will help fix common issues with accessibility. As JSX offers slightly different syntax to regular HTML, issues with `alt` text and `tabindex`, for example, will not be picked up by regular plugins.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-127. ### How to make AJAX call and in which component lifecycle methods should I make an AJAX call?
-
-     You can use AJAX libraries such as Axios, jQuery AJAX, and the browser built-in `fetch`. You should fetch data in the `componentDidMount()` lifecycle method. This is so you can use `setState()` to update your component when the data is retrieved.
-
-     For example, the employees list fetched from API and set local state:
-
-     ```jsx harmony
-     class MyComponent extends React.Component {
-       constructor(props) {
-         super(props)
-         this.state = {
-           employees: [],
-           error: null
-         }
-       }
-
-       componentDidMount() {
-         fetch('https://api.example.com/items')
-           .then(res => res.json())
-           .then(
-             (result) => {
-               this.setState({
-                 employees: result.employees
-               })
-             },
-             (error) => {
-               this.setState({ error })
-             }
-           )
-       }
-
-       render() {
-         const { error, employees } = this.state
-         if (error) {
-           return <div>Error: {error.message}</div>;
-         } else {
-           return (
-             <ul>
-               {employees.map(employee => (
-                 <li key={employee.name}>
-                   {employee.name}-{employee.experience}
-                 </li>
-               ))}
-             </ul>
-           )
-         }
-       }
-     }
      ```
 
 
@@ -2308,74 +2018,6 @@ You can download the PDF and Epub version of this repository from the latest run
          )
          ```
 
-     3. **Using context:**
-
-         This option is not recommended and treated as unstable API.
-
-         ```jsx harmony
-         const Button = (props, context) => (
-           <button
-             type='button'
-             onClick={() => {
-               context.history.push('/new-location')
-             }}
-           >
-             {'Click Me!'}
-           </button>
-         )
-
-         Button.contextTypes = {
-           history: React.PropTypes.shape({
-             push: React.PropTypes.func.isRequired
-           })
-         }
-         ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-134. ### How to get query parameters in React Router v4?
-
-     The ability to parse query strings was taken out of React Router v4 because there have been user requests over the years to support different implementation. So the decision has been given to users to choose the implementation they like. The recommended approach is to use query strings library.
-
-     ```javascript
-     const queryString = require('query-string');
-     const parsed = queryString.parse(props.location.search);
-     ```
-
-     You can also use `URLSearchParams` if you want something native:
-
-     ```javascript
-     const params = new URLSearchParams(props.location.search)
-     const foo = params.get('name')
-     ```
-
-     You should use a *polyfill* for IE11.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-135. ### Why you get "Router may have only one child element" warning?
-
-     You have to wrap your Route's in a `<Switch>` block because `<Switch>` is unique in that it renders a route exclusively.
-
-     At first you need to add `Switch` to your imports:
-
-     ```javascript
-     import { Switch, Router, Route } from 'react-router'
-     ```
-
-     Then define the routes within `<Switch>` block:
-
-     ```jsx harmony
-     <Router>
-       <Switch>
-         <Route {/* ... */} />
-         <Route {/* ... */} />
-       </Switch>
-     </Router>
-     ```
-
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -2451,148 +2093,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
 
    **[⬆ Back to Top](#table-of-contents)**
-    
-139. ### How to perform automatic redirect after login?
-
-     The `react-router` package provides `<Redirect>` component in React Router. Rendering a `<Redirect>` will navigate to a new location. Like server-side redirects, the new location will override the current location in the history stack.
-
-     ```javascript
-     import React, { Component } from 'react'
-     import { Redirect } from 'react-router'
-
-     export default class LoginComponent extends Component {
-       render() {
-         if (this.state.isLoggedIn === true) {
-           return <Redirect to="/your/redirect/page" />
-         } else {
-           return <div>{'Login Please'}</div>
-         }
-       }
-     }
-     ```
-
-## React Internationalization
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-140. ### What is React Intl?
-
-     The *React Intl* library makes internalization in React straightforward, with off-the-shelf components and an API that can handle everything from formatting strings, dates, and numbers, to pluralization. React Intl is part of *FormatJS* which provides bindings to React via its components and API.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-141. ### What are the main features of React Intl?
-     Below are the main features of React Intl,
-
-        1. Display numbers with separators.
-        2. Display dates and times correctly.
-        3. Display dates relative to "now".
-        4. Pluralize labels in strings.
-        5. Support for 150+ languages.
-        6. Runs in the browser and Node.
-        7. Built on standards.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-142. ### What are the two ways of formatting in React Intl?
-
-     The library provides two ways to format strings, numbers, and dates:
-
-     1. **Using react components:**
-
-         ```jsx harmony
-         <FormattedMessage
-           id={'account'}
-           defaultMessage={'The amount is less than minimum balance.'}
-         />
-         ```
-
-     2. **Using an API:**
-
-         ```javascript
-         const messages = defineMessages({
-           accountMessage: {
-             id: 'account',
-             defaultMessage: 'The amount is less than minimum balance.',
-           }
-         })
-
-         formatMessage(messages.accountMessage)
-         ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-143. ### How to use `<FormattedMessage>` as placeholder using React Intl?
-
-     The `<Formatted... />` components from `react-intl` return elements, not plain text, so they can't be used for placeholders, alt text, etc. In that case, you should use lower level API `formatMessage()`. You can inject the `intl` object into your component using `injectIntl()` higher-order component and then format the message using `formatMessage()` available on that object.
-
-     ```jsx harmony
-     import React from 'react'
-     import { injectIntl, intlShape } from 'react-intl'
-
-     const MyComponent = ({ intl }) => {
-       const placeholder = intl.formatMessage({id: 'messageId'})
-       return <input placeholder={placeholder} />
-     }
-
-     MyComponent.propTypes = {
-       intl: intlShape.isRequired
-     }
-
-     export default injectIntl(MyComponent)
-     ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-144. ### How to access current locale with React Intl?
-
-     You can get the current locale in any component of your application using `injectIntl()`:
-
-     ```jsx harmony
-     import { injectIntl, intlShape } from 'react-intl'
-
-     const MyComponent = ({ intl }) => (
-       <div>{`The current locale is ${intl.locale}`}</div>
-     )
-
-     MyComponent.propTypes = {
-       intl: intlShape.isRequired
-     }
-
-     export default injectIntl(MyComponent)
-     ```
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-145. ### How to format date using React Intl?
-
-     The `injectIntl()` higher-order component will give you access to the `formatDate()` method via the props in your component. The method is used internally by instances of `FormattedDate` and it returns the string representation of the formatted date.
-
-     ```jsx harmony
-     import { injectIntl, intlShape } from 'react-intl'
-
-     const stringDate = this.props.intl.formatDate(date, {
-       year: 'numeric',
-       month: 'numeric',
-       day: 'numeric'
-     })
-
-     const MyComponent = ({intl}) => (
-       <div>{`The formatted date is ${stringDate}`}</div>
-     )
-
-     MyComponent.propTypes = {
-       intl: intlShape.isRequired
-     }
-
-     export default injectIntl(MyComponent)
-     ```
 
 ## React Testing
 
@@ -2687,44 +2187,7 @@ You can download the PDF and Epub version of this repository from the latest run
 
 
    **[⬆ Back to Top](#table-of-contents)**
-    
-151. ### Give a simple example of Jest test case
 
-     Let's write a test for a function that adds two numbers in `sum.js` file:
-
-     ```javascript
-     const sum = (a, b) => a + b
-
-     export default sum
-     ```
-
-     Create a file named `sum.test.js` which contains actual test:
-
-     ```javascript
-     import sum from './sum'
-
-     test('adds 1 + 2 to equal 3', () => {
-       expect(sum(1, 2)).toBe(3)
-     })
-     ```
-
-     And then add the following section to your `package.json`:
-
-     ```json
-     {
-       "scripts": {
-         "test": "jest"
-       }
-     }
-     ```
-
-     Finally, run `yarn test` or `npm test` and Jest will print a result:
-
-     ```console
-     $ yarn test
-     PASS ./sum.test.js
-     ✓ adds 1 + 2 to equal 3 (2ms)
-     ```
 
 ## React Redux
 
