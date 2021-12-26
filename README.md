@@ -120,6 +120,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |290| [Is it prop must be named as render for render props?](#is-it-prop-must-be-named-as-render-for-render-props)|
 |291| [What are the problems of using render props with pure components?](#what-are-the-problems-of-using-render-props-with-pure-components)|
 |292| [How do you create HOC using render props?](#how-do-you-create-hoc-using-render-props)|
+|329| [What is prop drilling?](#what-are-react-server-components) |
 |   | **React Router** |
 |129| [What is React Router?](#what-is-react-router) |
 |130| [How React Router is different from history library?](#how-react-router-is-different-from-history-library) |
@@ -227,7 +228,6 @@ You can download the PDF and Epub version of this repository from the latest run
 |323| [What is the difference between Imperative and Declarative in React?](#what-is-the-difference-between-imperative-and-declarative-in-react)|
 |324| [What are the benefits of using typescript with reactjs?](#what-are-the-benefits-of-using-typescript-with-reactjs)|
 |329| [What are React Server components?](#what-are-react-server-components) |
-|329| [What is prop drilling?](#what-are-react-server-components) |
 
 ## Core React
 
@@ -2121,6 +2121,9 @@ You can download the PDF and Epub version of this repository from the latest run
      This way render props gives the flexibility of using either pattern.
 
 **[⬆ Back to Top](#table-of-contents)**
+326. ### What is prop drilling?
+     Prop Drilling is the process by which you pass data from one component of the React Component tree to another by going through other components that do not need the data but only help in passing it around.
+     **[⬆ Back to Top](#table-of-contents)**
 
 
 ## React Router
@@ -3954,9 +3957,5 @@ You can download the PDF and Epub version of this repository from the latest run
     
      **Note:** React Server Components is still under development and not recommended for production yet.
 
-     **[⬆ Back to Top](#table-of-contents)**
-     
-326. ### What is prop drilling?
-     Prop Drilling is the process by which you pass data from one component of the React Component tree to another by going through other components that do not need the data but only help in passing it around.
      **[⬆ Back to Top](#table-of-contents)**
 
