@@ -120,7 +120,6 @@ You can download the PDF and Epub version of this repository from the latest run
 |290| [Is it prop must be named as render for render props?](#is-it-prop-must-be-named-as-render-for-render-props)|
 |291| [What are the problems of using render props with pure components?](#what-are-the-problems-of-using-render-props-with-pure-components)|
 |292| [How do you create HOC using render props?](#how-do-you-create-hoc-using-render-props)|
-
 |   | **React Router** |
 |129| [What is React Router?](#what-is-react-router) |
 |130| [How React Router is different from history library?](#how-react-router-is-different-from-history-library) |
@@ -129,14 +128,12 @@ You can download the PDF and Epub version of this repository from the latest run
 |133| [How do you programmatically navigate using React router v4?](#how-do-you-programmatically-navigate-using-react-router-v4) |
 |136| [How to pass params to history.push method in React Router v4?](#how-to-pass-params-to-historypush-method-in-react-router-v4) |
 |138| [How to get history on React Router v4?](#how-to-get-history-on-react-router-v4) |
-
 |   | **React Testing** |
 |146| [What is Shallow Renderer in React testing?](#what-is-shallow-renderer-in-react-testing) |
 |147| [What is TestRenderer package in React?](#what-is-testrenderer-package-in-react) |
 |148| [What is the purpose of ReactTestUtils package?](#what-is-the-purpose-of-reacttestutils-package) |
 |149| [What is Jest?](#what-is-jest) |
 |150| [What are the advantages of Jest over Jasmine?](#what-are-the-advantages-of-jest-over-jasmine) |
-
 |   | **React Redux** |
 |152| [What is Flux?](#what-is-flux) |
 |153| [What is Redux?](#what-is-redux) |
@@ -177,7 +174,6 @@ You can download the PDF and Epub version of this repository from the latest run
 |188| [What is an action in Redux?](#what-is-an-action-in-redux) |
 |316| [What is MobX?](#what-is-mobx)|
 |317| [What are the differences between Redux and MobX?](#what-are-the-differences-between-redux-and-mobx)|
-
 |   | **Miscellaneous** |
 |206| [What are the main features of reselect library?](#what-are-the-main-features-of-reselect-library) |
 |207| [Give an example of reselect usage?](#give-an-example-of-reselect-usage) |
@@ -235,8 +231,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
 ## Core React
 
-
-    
 1. ### What is React?
 
     React is an **open-source frontend JavaScript library** which is used for building user interfaces especially for single page applications. It is used for handling view layer for web and mobile apps. React was created by [Jordan Walke](https://github.com/jordwalke), a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
