@@ -175,6 +175,8 @@ You can download the PDF and Epub version of this repository from the latest run
 |186| [How to set initial state in Redux?](#how-to-set-initial-state-in-redux) |
 |187| [How Relay is different from Redux?](#how-relay-is-different-from-redux) |
 |188| [What is an action in Redux?](#what-is-an-action-in-redux) |
+|316| [What is MobX?](#what-is-mobx)|
+|317| [What are the differences between Redux and MobX?](#what-are-the-differences-between-redux-and-mobx)|
 
 |   | **Miscellaneous** |
 |206| [What are the main features of reselect library?](#what-are-the-main-features-of-reselect-library) |
@@ -222,24 +224,14 @@ You can download the PDF and Epub version of this repository from the latest run
 |304| [Is Hooks cover all use cases for classes?](#is-hooks-cover-all-use-cases-for-classes)|
 |310| [What are typical middleware choices for handling asynchronous calls in Redux?](#what-are-typical-middleware-choices-for-handling-asynchronous-calls-in-redux)|
 |311| [Do browsers understand JSX code?](#do-browsers-understand-jsx-code)|
-|312| [Describe about data flow in react?](#describe-about-data-flow-in-react)|
-|313| [What is react scripts?](#what-is-react-scripts)|
 |314| [What are the features of create react app?](#what-are-the-features-of-create-react-app)|
-|315| [What is the purpose of renderToNodeStream method?](#what-is-the-purpose-of-rendertonodestream-method)|
-|316| [What is MobX?](#what-is-mobx)|
-|317| [What are the differences between Redux and MobX?](#what-are-the-differences-between-redux-and-mobx)|
 |318| [Should I learn ES6 before learning ReactJS?](#should-i-learn-es6-before-learning-reactjs)|
 |319| [What is Concurrent Rendering?](#what-is-concurrent-rendering)|
 |320| [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)|
-|321| [Can I use javascript urls in react16.9?](#can-i-use-javascript-urls-in-react169)|
-|322| [What is the purpose of eslint plugin for hooks?](#what-is-the-purpose-of-eslint-plugin-for-hooks)|
 |323| [What is the difference between Imperative and Declarative in React?](#what-is-the-difference-between-imperative-and-declarative-in-react)|
 |324| [What are the benefits of using typescript with reactjs?](#what-are-the-benefits-of-using-typescript-with-reactjs)|
-|325| [How do you make sure that user remains authenticated on page refresh while using Context API State Management?](#how-do-you-make-sure-that-user-remains-authenticated-on-page-refresh-while-using-context-api-state-management)|
-|326| [What are the benefits of new JSX transform?](#what-are-the-benefits-of-new-jsx-transform)|
-|327| [How does new JSX transform different from old transform?](#how-does-new-jsx-transform-different-from-old-transform)|
-|328| [How do you get redux scaffolding using create-react-app?](#how-do-you-get-redux-scaffolding-using-create-react-app)|
-|329| [What are React Server components?](#what-are-react-server-components)
+|329| [What are React Server components?](#what-are-react-server-components) |
+|329| [What is prop drilling?](#what-are-react-server-components) |
 
 ## Core React
 
@@ -3055,6 +3047,29 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
 
+316. ### What is MobX?
+     MobX is a simple, scalable and battle tested state management solution for applying functional reactive programming (TFRP). For reactJs application, you need to install below packages,
+     ```bash
+     npm install mobx --save
+     npm install mobx-react --save
+     ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+317. ### What are the differences between Redux and MobX?
+     Below are the main differences between Redux and MobX,
+
+     | Topic | Redux | MobX |
+          | ----- | ------- | ------- 
+     | Definition| It is a javascript library for managing the application state | It is a library for reactively managing the state of your applications |
+     | Programming | It is mainly written in ES6 | It is written in JavaScript(ES5) |
+     | Data Store | There is only one large store exist for data storage | There is more than one store for storage |
+     | Usage | Mainly used for large and complex applications | Used for simple applications |
+     | Performance | Need to be improved | Provides better performance |
+     | How it stores | Uses JS Object to store | Uses observable to store the data |
+
+   **[⬆ Back to Top](#table-of-contents)**
+
 ## Miscellaneous
 
 
@@ -3831,16 +3846,6 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-312. ### Describe about data flow in react?
-     React implements one-way reactive data flow using props which reduce boilerplate and is easier to understand than traditional two-way data binding.
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-313. ### What is react scripts?
-     The `react-scripts` package is a set of scripts from the create-react-app starter pack which helps you kick off projects without configuring. The `react-scripts start` command sets up the development environment and starts a server, as well as hot module reloading.
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
 314. ### What are the features of create react app?
      Below are the list of some of the features provided by create react app.
 
@@ -3851,36 +3856,6 @@ You can download the PDF and Epub version of this repository from the latest run
      5. A fast interactive unit test runner with built-in support for coverage reporting
      6. A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps
      7. An offline-first service worker and a web app manifest, meeting all the Progressive Web App criteria.
-
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-315. ### What is the purpose of renderToNodeStream method?
-     The `ReactDOMServer#renderToNodeStream` method is used to generate HTML on the server and send the markup down on the initial request for faster page loads. It also helps search engines to crawl your pages easily for SEO purposes.
-     **Note:** Remember this method is not available in the browser but only server.
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-316. ### What is MobX?
-     MobX is a simple, scalable and battle tested state management solution for applying functional reactive programming (TFRP). For reactJs application, you need to install below packages,
-     ```bash
-     npm install mobx --save
-     npm install mobx-react --save
-     ```
-
-   **[⬆ Back to Top](#table-of-contents)**
-    
-317. ### What are the differences between Redux and MobX?
-     Below are the main differences between Redux and MobX,
-
-     | Topic | Redux | MobX |
-     | ----- | ------- | ------- 
-     | Definition| It is a javascript library for managing the application state | It is a library for reactively managing the state of your applications |
-     | Programming | It is mainly written in ES6 | It is written in JavaScript(ES5) |
-     | Data Store | There is only one large store exist for data storage | There is more than one store for storage |
-     | Usage | Mainly used for large and complex applications | Used for simple applications |
-     | Performance | Need to be improved | Provides better performance |
-     | How it stores | Uses JS Object to store | Uses observable to store the data |
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -3936,28 +3911,6 @@ You can download the PDF and Epub version of this repository from the latest run
      Both refers the same thing. Previously concurrent Mode being referred to as "Async Mode" by React team. The name has been changed to highlight React’s ability to perform work on different priority levels. So it avoids the confusion from other approaches to Async Rendering.
 
    **[⬆ Back to Top](#table-of-contents)**
-    
-321. ### Can I use javascript urls in react16.9?
-     Yes, you can use javascript: URLs but it will log a warning in the console. Because URLs starting with javascript: are dangerous by including unsanitized output in a tag like ```<a href>``` and create a security hole.
-
-     ```javascript
-     const companyProfile = {
-       website: "javascript: alert('Your website is hacked')",
-     };
-     // It will log a warning
-     <a href={companyProfile.website}>More details</a>
-     ```
-     Remember that the future versions will throw an error for javascript URLs.
-  
-   **[⬆ Back to Top](#table-of-contents)**
-   
-322. ### What is the purpose of eslint plugin for hooks?
-     The ESLint plugin enforces rules of Hooks to avoid bugs. It assumes that any function starting with ”use” and a capital letter right after it is a Hook. In particular, the rule enforces that,
-
-     1. Calls to Hooks are either inside a PascalCase function (assumed to be a component) or another useSomething function (assumed to be a custom Hook).
-     2. Hooks are called in the same order on every render.
-
-   **[⬆ Back to Top](#table-of-contents)**
 
 323. ### What is the difference between Imperative and Declarative in React?
      Imagine a simple UI component, such as a "Like" button. When you tap it, it turns blue if it was previously grey, and grey if it was previously blue.
@@ -4002,154 +3955,14 @@ You can download the PDF and Epub version of this repository from the latest run
 
      **[⬆ Back to Top](#table-of-contents)**
 
-325. ### How do you make sure that user remains authenticated on page refresh while using Context API State Management?
-When a user logs in and reload, to persist the state generally we add the load user action in the useEffect hooks in the main App.js. While using Redux, loadUser action can be easily accessed.
-
-**App.js**
-
-```js
-import {loadUser}  from '../actions/auth';
-store.dispatch(loadUser());
-```
-
-* But while using **Context API**, to access context in App.js, wrap the AuthState in index.js so that App.js can access the auth context. Now whenever the page reloads, no matter what route you are on, the user will be authenticated as **loadUser** action will be triggered on each re-render.
-
-**index.js**
-
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import AuthState from './context/auth/AuthState'
-
-ReactDOM.render(
-  <React.StrictMode>
-    <AuthState>
-      <App />
-    </AuthState>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-```
-**App.js**
-
-```js
-  const authContext = useContext(AuthContext);
-
-  const { loadUser } = authContext;
-
-  useEffect(() => {
-    loadUser();
-  },[])
-```
-
-**loadUser**
-
-```js
-    const loadUser = async () => {
-        const token = sessionStorage.getItem('token');
-
-        if(!token){
-            dispatch({
-                type: ERROR
-            })
-        }
-        setAuthToken(token);
-
-        try {
-            const res = await axios('/api/auth'); 
-
-            dispatch({
-                type: USER_LOADED,
-                payload: res.data.data
-            })
-            
-        } catch (err) {
-           console.error(err); 
-        }
-    }
-```
-
-  **[⬆ Back to Top](#table-of-contents)**
-
-326. ### What are the benefits of new JSX transform?
-     There are three major benefits of new JSX transform,
-
-     1. It is possible to use JSX without importing React packages
-     2. The compiled output might improve the bundle size in a small amount
-     3. The future improvements provides the flexibility to reduce the number of concepts to learn React.
-
-327. ### How does new JSX transform different from old transform?
-     The new JSX transform doesn’t require React to be in scope. i.e, You don't need to import React package for simple scenarios.
-
-     Let's take an example to look at the main differences between the old and the new transform,
-
-     **Old Transform:**
-
-     ```js
-     import React from 'react';
-
-     function App() {
-       return <h1>Good morning!!</h1>;
-     }
-     ```
-
-     Now JSX transform convert the above code into regular JavaScript as below,
-
-     ```js
-     import React from 'react';
-
-     function App() {
-       return React.createElement('h1', null, 'Good morning!!');
-     }
-     ```
-
-     **New Transform:**
-
-     The new JSX transform doesn't require any React imports
-
-     ```js
-     function App() {
-       return <h1>Good morning!!</h1>;
-     }
-     ```
-
-     Under the hood JSX transform compiles to below code
-
-     ```js
-     import {jsx as _jsx} from 'react/jsx-runtime';
-
-     function App() {
-       return _jsx('h1', { children: 'Good morning!!' });
-     }
-     ```
-
-     **Note:** You still need to import React to use Hooks.
-     
-328. ### How do you get redux scaffolding using create-react-app?
-     Redux team has provided official redux+js or redux+typescript templates for create-react-app project. The generated project setup includes,
-     
-     1. Redux Toolkit and React-Redux dependencies
-     2. Create and configure Redux store
-     3. React-Redux `<Provider>` passing the store to React components
-     4. Small "counter" example to demo how to add redux logic and React-Redux hooks API to interact with the store from components
-     
-     The below commands need to be executed along with template option as below,
-     
-     1. **Javascript template:**
-     ```js
-     npx create-react-app my-app --template redux
-     ```
-     2. **Typescript template:**
-     ```js
-     npx create-react-app my-app --template redux-typescript
-     ````
-329. ### What are React Server components?
+325. ### What are React Server components?
      React Server Component is a way to write React component that gets rendered in the server-side with the purpose of improving React app performance. These components allow us to load components from the backend. 
     
      **Note:** React Server Components is still under development and not recommended for production yet.
+
+     **[⬆ Back to Top](#table-of-contents)**
      
-330. ### What is prop drilling?
+326. ### What is prop drilling?
      Prop Drilling is the process by which you pass data from one component of the React Component tree to another by going through other components that do not need the data but only help in passing it around.
-     
-331. ### What are the different ways to prevent state mutation?
+     **[⬆ Back to Top](#table-of-contents)**
+
